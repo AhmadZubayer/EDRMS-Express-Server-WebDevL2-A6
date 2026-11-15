@@ -9,10 +9,14 @@ import { prisma } from "../../../../lib/prisma";
 import { AppError } from "../../../../utils/AppError";
 import { paymentService } from "../../payment.service";
 
-const getRedirectUrl = (status: "success" | "failed" | "cancelled") => {
+const getRedirectUrl = (
+	status: "success" | "failed" | "cancelled",
+	ref?: string,
+) => {
 	const base = (config.frontend_url || "").split(",")[0].trim();
 	const page = status === "success" ? "success" : "cancel";
-	return `${base}/donations/payment/${page}?provider=bkash&status=${status}`;
+	const refParam = ref ? `&ref=${encodeURIComponent(ref)}` : "";
+	return `${base}/donations/payment/${page}?provider=bkash&status=${status}${refParam}`;
 };
 
 const handleCallback = async (query: Record<string, unknown>) => {
@@ -44,7 +48,7 @@ const handleCallback = async (query: Record<string, unknown>) => {
 
 	// the callback can arrive twice (refresh, back button)
 	if (payment.status === PaymentStatus.COMPLETED) {
-		return { redirectUrl: getRedirectUrl("success") };
+		return { redirectUrl: getRedirectUrl("success", paymentID) };
 	}
 
 	const paymentInfo = {
@@ -104,7 +108,7 @@ const handleCallback = async (query: Record<string, unknown>) => {
 		return { redirectUrl: getRedirectUrl("cancelled") };
 	}
 
-	return { redirectUrl: getRedirectUrl("success") };
+	return { redirectUrl: getRedirectUrl("success", paymentID) };
 };
 
 export const bkashCallback = {
