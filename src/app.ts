@@ -11,6 +11,7 @@ import swaggerUi from "swagger-ui-express";
 import config from "./app/config";
 import { logger } from "./app/lib/logger";
 import { swaggerDocument } from "./app/lib/swagger";
+import { ensureRedis } from "./app/middleware/ensureRedis";
 import { globalErrorHandler } from "./app/middleware/globalErrorHandler";
 import { notFound } from "./app/middleware/notFound";
 import { userRoutes } from "./app/module/user/user.route";
@@ -61,6 +62,8 @@ app.get("/", (req: Request, res: Response) => {
 });
 
 app.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
+app.use(ensureRedis);
 
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);

@@ -1,4 +1,5 @@
 import { createClient } from "redis";
+import { logger } from "./logger";
 import config from "../config";
 
 export const redisClient = createClient({
@@ -9,3 +10,5 @@ export const redisClient = createClient({
 		port: Number(config.redis_port),
 	},
 });
+
+redisClient.on("error", (err) => logger.error({ err }, "Redis client error"));
