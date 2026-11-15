@@ -1,708 +1,1239 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1740" height="1830" viewBox="0 0 1740 1830" font-family="Segoe UI, Arial, sans-serif">
-<rect width="100%" height="100%" fill="#ffffff"/>
-<text x="40" y="26" font-size="18" font-weight="700" fill="#222">EDRMS Database Schema (Prisma / PostgreSQL)</text>
-<path d="M380,194 C335,194 335,314 290,314" fill="none" stroke="#999" stroke-width="1.2"/>
-<circle cx="380" cy="194" r="3" fill="#999"/>
-<path d="M720,134 C675,134 675,194 630,194" fill="none" stroke="#999" stroke-width="1.2"/>
-<circle cx="720" cy="134" r="3" fill="#999"/>
-<path d="M720,134 C675,134 675,830 630,830" fill="none" stroke="#999" stroke-width="1.2"/>
-<circle cx="720" cy="134" r="3" fill="#999"/>
-<path d="M1060,174 C845,174 845,194 630,194" fill="none" stroke="#999" stroke-width="1.2"/>
-<circle cx="1060" cy="174" r="3" fill="#999"/>
-<path d="M1400,184 C845,184 845,314 290,314" fill="none" stroke="#999" stroke-width="1.2"/>
-<circle cx="1400" cy="184" r="3" fill="#999"/>
-<path d="M290,712 C335,712 335,194 380,194" fill="none" stroke="#999" stroke-width="1.2"/>
-<circle cx="290" cy="712" r="3" fill="#999"/>
-<path d="M290,712 C845,712 845,184 1400,184" fill="none" stroke="#999" stroke-width="1.2"/>
-<circle cx="290" cy="712" r="3" fill="#999"/>
-<path d="M630,412 C670,412 670,54 630,54" fill="none" stroke="#999" stroke-width="1.2"/>
-<circle cx="630" cy="412" r="3" fill="#999"/>
-<path d="M720,432 C505,432 505,314 290,314" fill="none" stroke="#999" stroke-width="1.2"/>
-<circle cx="720" cy="432" r="3" fill="#999"/>
-<path d="M1310,482 C1355,482 1355,492 1400,492" fill="none" stroke="#999" stroke-width="1.2"/>
-<circle cx="1310" cy="482" r="3" fill="#999"/>
-<path d="M1060,482 C1015,482 1015,432 970,432" fill="none" stroke="#999" stroke-width="1.2"/>
-<circle cx="1060" cy="482" r="3" fill="#999"/>
-<path d="M290,850 C330,850 330,54 290,54" fill="none" stroke="#999" stroke-width="1.2"/>
-<circle cx="290" cy="850" r="3" fill="#999"/>
-<path d="M380,830 C335,830 335,314 290,314" fill="none" stroke="#999" stroke-width="1.2"/>
-<circle cx="380" cy="830" r="3" fill="#999"/>
-<path d="M380,830 C335,830 335,314 290,314" fill="none" stroke="#999" stroke-width="1.2"/>
-<circle cx="380" cy="830" r="3" fill="#999"/>
-<path d="M720,760 C505,760 505,314 290,314" fill="none" stroke="#999" stroke-width="1.2"/>
-<circle cx="720" cy="760" r="3" fill="#999"/>
-<path d="M1060,730 C1015,730 1015,760 970,760" fill="none" stroke="#999" stroke-width="1.2"/>
-<circle cx="1060" cy="730" r="3" fill="#999"/>
-<path d="M1060,730 C675,730 675,314 290,314" fill="none" stroke="#999" stroke-width="1.2"/>
-<circle cx="1060" cy="730" r="3" fill="#999"/>
-<path d="M1400,730 C1185,730 1185,760 970,760" fill="none" stroke="#999" stroke-width="1.2"/>
-<circle cx="1400" cy="730" r="3" fill="#999"/>
-<path d="M1400,730 C845,730 845,314 290,314" fill="none" stroke="#999" stroke-width="1.2"/>
-<circle cx="1400" cy="730" r="3" fill="#999"/>
-<path d="M290,1298 C505,1298 505,760 720,760" fill="none" stroke="#999" stroke-width="1.2"/>
-<circle cx="290" cy="1298" r="3" fill="#999"/>
-<path d="M290,1248 C330,1248 330,54 290,54" fill="none" stroke="#999" stroke-width="1.2"/>
-<circle cx="290" cy="1248" r="3" fill="#999"/>
-<path d="M380,1238 C335,1238 335,314 290,314" fill="none" stroke="#999" stroke-width="1.2"/>
-<circle cx="380" cy="1238" r="3" fill="#999"/>
-<path d="M720,1078 C675,1078 675,1238 630,1238" fill="none" stroke="#999" stroke-width="1.2"/>
-<circle cx="720" cy="1078" r="3" fill="#999"/>
-<path d="M720,1078 C505,1078 505,314 290,314" fill="none" stroke="#999" stroke-width="1.2"/>
-<circle cx="720" cy="1078" r="3" fill="#999"/>
-<path d="M720,1078 C505,1078 505,314 290,314" fill="none" stroke="#999" stroke-width="1.2"/>
-<circle cx="720" cy="1078" r="3" fill="#999"/>
-<path d="M1060,968 C845,968 845,1238 630,1238" fill="none" stroke="#999" stroke-width="1.2"/>
-<circle cx="1060" cy="968" r="3" fill="#999"/>
-<path d="M1060,968 C675,968 675,314 290,314" fill="none" stroke="#999" stroke-width="1.2"/>
-<circle cx="1060" cy="968" r="3" fill="#999"/>
-<path d="M1400,918 C1015,918 1015,1238 630,1238" fill="none" stroke="#999" stroke-width="1.2"/>
-<circle cx="1400" cy="918" r="3" fill="#999"/>
-<path d="M1400,918 C1185,918 1185,1078 970,1078" fill="none" stroke="#999" stroke-width="1.2"/>
-<circle cx="1400" cy="918" r="3" fill="#999"/>
-<path d="M290,1546 C675,1546 675,968 1060,968" fill="none" stroke="#999" stroke-width="1.2"/>
-<circle cx="290" cy="1546" r="3" fill="#999"/>
-<path d="M380,1546 C335,1546 335,314 290,314" fill="none" stroke="#999" stroke-width="1.2"/>
-<circle cx="380" cy="1546" r="3" fill="#999"/>
-<g><rect x="40" y="80" width="250" height="548" rx="4" fill="#fff" stroke="#666"/>
-<rect x="40" y="80" width="250" height="28" rx="4" fill="#f8cecc" stroke="#666"/>
-<text x="50" y="99" font-size="13" font-weight="700" fill="#222">users</text>
-<text x="48" y="122" font-size="10" font-weight="700" fill="#b00">PK</text>
-<text x="74" y="122" font-size="11" fill="#222">id</text>
-<text x="282" y="122" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="74" y="142" font-size="11" fill="#222">name</text>
-<text x="282" y="142" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="48" y="162" font-size="10" font-weight="700" fill="#b00">UQ</text>
-<text x="74" y="162" font-size="11" fill="#222">email</text>
-<text x="282" y="162" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="74" y="182" font-size="11" fill="#222">password</text>
-<text x="282" y="182" font-size="10" fill="#666" text-anchor="end">String?</text>
-<text x="48" y="202" font-size="10" font-weight="700" fill="#b00">UQ</text>
-<text x="74" y="202" font-size="11" fill="#222">googleId</text>
-<text x="282" y="202" font-size="10" fill="#666" text-anchor="end">String?</text>
-<text x="74" y="222" font-size="11" fill="#222">authProvider</text>
-<text x="282" y="222" font-size="10" fill="#666" text-anchor="end">AuthProvider</text>
-<text x="74" y="242" font-size="11" fill="#222">emailVerified</text>
-<text x="282" y="242" font-size="10" fill="#666" text-anchor="end">Boolean</text>
-<text x="74" y="262" font-size="11" fill="#222">role</text>
-<text x="282" y="262" font-size="10" fill="#666" text-anchor="end">UserRole</text>
-<text x="74" y="282" font-size="11" fill="#222">status</text>
-<text x="282" y="282" font-size="10" fill="#666" text-anchor="end">UserStatus</text>
-<text x="74" y="302" font-size="11" fill="#222">needPasswordChange</text>
-<text x="282" y="302" font-size="10" fill="#666" text-anchor="end">Boolean</text>
-<text x="74" y="322" font-size="11" fill="#222">imageUrl</text>
-<text x="282" y="322" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="74" y="342" font-size="11" fill="#222">imagePublicId</text>
-<text x="282" y="342" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="48" y="362" font-size="10" font-weight="700" fill="#b00">UQ</text>
-<text x="74" y="362" font-size="11" fill="#222">phone</text>
-<text x="282" y="362" font-size="10" fill="#666" text-anchor="end">String?</text>
-<text x="74" y="382" font-size="11" fill="#222">house</text>
-<text x="282" y="382" font-size="10" fill="#666" text-anchor="end">String?</text>
-<text x="74" y="402" font-size="11" fill="#222">city</text>
-<text x="282" y="402" font-size="10" fill="#666" text-anchor="end">String?</text>
-<text x="74" y="422" font-size="11" fill="#222">district</text>
-<text x="282" y="422" font-size="10" fill="#666" text-anchor="end">String?</text>
-<text x="74" y="442" font-size="11" fill="#222">country</text>
-<text x="282" y="442" font-size="10" fill="#666" text-anchor="end">String?</text>
-<text x="74" y="462" font-size="11" fill="#222">gpsLat</text>
-<text x="282" y="462" font-size="10" fill="#666" text-anchor="end">Decimal?</text>
-<text x="74" y="482" font-size="11" fill="#222">gpsLng</text>
-<text x="282" y="482" font-size="10" fill="#666" text-anchor="end">Decimal?</text>
-<text x="74" y="502" font-size="11" fill="#222">isSafe</text>
-<text x="282" y="502" font-size="10" fill="#666" text-anchor="end">Boolean?</text>
-<text x="74" y="522" font-size="11" fill="#222">emergencyMessage</text>
-<text x="282" y="522" font-size="10" fill="#666" text-anchor="end">String?</text>
-<text x="74" y="542" font-size="11" fill="#222">medicalInformation</text>
-<text x="282" y="542" font-size="10" fill="#666" text-anchor="end">String?</text>
-<text x="74" y="562" font-size="11" fill="#222">isDeleted</text>
-<text x="282" y="562" font-size="10" fill="#666" text-anchor="end">Boolean</text>
-<text x="74" y="582" font-size="11" fill="#222">deletedAt</text>
-<text x="282" y="582" font-size="10" fill="#666" text-anchor="end">DateTime?</text>
-<text x="74" y="602" font-size="11" fill="#222">createdAt</text>
-<text x="282" y="602" font-size="10" fill="#666" text-anchor="end">DateTime</text>
-<text x="74" y="622" font-size="11" fill="#222">updatedAt</text>
-<text x="282" y="622" font-size="10" fill="#666" text-anchor="end">DateTime</text>
-</g>
-<g><rect x="380" y="80" width="250" height="308" rx="4" fill="#fff" stroke="#666"/>
-<rect x="380" y="80" width="250" height="28" rx="4" fill="#d5e8d4" stroke="#666"/>
-<text x="390" y="99" font-size="13" font-weight="700" fill="#222">volunteers</text>
-<text x="388" y="122" font-size="10" font-weight="700" fill="#b00">PK</text>
-<text x="414" y="122" font-size="11" fill="#222">id</text>
-<text x="622" y="122" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="414" y="142" font-size="11" fill="#222">skills</text>
-<text x="622" y="142" font-size="10" fill="#666" text-anchor="end">VolunteerSkill[]</text>
-<text x="414" y="162" font-size="11" fill="#222">whyJoin</text>
-<text x="622" y="162" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="414" y="182" font-size="11" fill="#222">nidCardUrl</text>
-<text x="622" y="182" font-size="10" fill="#666" text-anchor="end">String?</text>
-<text x="414" y="202" font-size="11" fill="#222">nidCardPublicId</text>
-<text x="622" y="202" font-size="10" fill="#666" text-anchor="end">String?</text>
-<text x="414" y="222" font-size="11" fill="#222">available</text>
-<text x="622" y="222" font-size="10" fill="#666" text-anchor="end">Boolean</text>
-<text x="414" y="242" font-size="11" fill="#222">verificationStatus</text>
-<text x="622" y="242" font-size="10" fill="#666" text-anchor="end">VolunteerVerificationStatus</text>
-<text x="414" y="262" font-size="11" fill="#222">currentLatitude</text>
-<text x="622" y="262" font-size="10" fill="#666" text-anchor="end">Decimal?</text>
-<text x="414" y="282" font-size="11" fill="#222">currentLongitude</text>
-<text x="622" y="282" font-size="10" fill="#666" text-anchor="end">Decimal?</text>
-<text x="414" y="302" font-size="11" fill="#222">onDuty</text>
-<text x="622" y="302" font-size="10" fill="#666" text-anchor="end">Boolean</text>
-<text x="414" y="322" font-size="11" fill="#222">lastLocationUpdate</text>
-<text x="622" y="322" font-size="10" fill="#666" text-anchor="end">DateTime?</text>
-<text x="388" y="342" font-size="10" font-weight="700" fill="#b00">FK</text>
-<text x="414" y="342" font-size="11" fill="#222">userId</text>
-<text x="622" y="342" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="414" y="362" font-size="11" fill="#222">createdAt</text>
-<text x="622" y="362" font-size="10" fill="#666" text-anchor="end">DateTime</text>
-<text x="414" y="382" font-size="11" fill="#222">updatedAt</text>
-<text x="622" y="382" font-size="10" fill="#666" text-anchor="end">DateTime</text>
-</g>
-<g><rect x="720" y="80" width="250" height="188" rx="4" fill="#fff" stroke="#666"/>
-<rect x="720" y="80" width="250" height="28" rx="4" fill="#d5e8d4" stroke="#666"/>
-<text x="730" y="99" font-size="13" font-weight="700" fill="#222">volunteer_tasks</text>
-<text x="728" y="122" font-size="10" font-weight="700" fill="#b00">PK</text>
-<text x="754" y="122" font-size="11" fill="#222">id</text>
-<text x="962" y="122" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="754" y="142" font-size="11" fill="#222">status</text>
-<text x="962" y="142" font-size="10" fill="#666" text-anchor="end">VolunteerTaskStatus</text>
-<text x="754" y="162" font-size="11" fill="#222">progressNote</text>
-<text x="962" y="162" font-size="10" fill="#666" text-anchor="end">String?</text>
-<text x="754" y="182" font-size="11" fill="#222">completedAt</text>
-<text x="962" y="182" font-size="10" fill="#666" text-anchor="end">DateTime?</text>
-<text x="728" y="202" font-size="10" font-weight="700" fill="#b00">FK</text>
-<text x="754" y="202" font-size="11" fill="#222">volunteerId</text>
-<text x="962" y="202" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="728" y="222" font-size="10" font-weight="700" fill="#b00">FK</text>
-<text x="754" y="222" font-size="11" fill="#222">rescueRequestId</text>
-<text x="962" y="222" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="754" y="242" font-size="11" fill="#222">createdAt</text>
-<text x="962" y="242" font-size="10" fill="#666" text-anchor="end">DateTime</text>
-<text x="754" y="262" font-size="11" fill="#222">updatedAt</text>
-<text x="962" y="262" font-size="10" fill="#666" text-anchor="end">DateTime</text>
-</g>
-<g><rect x="1060" y="80" width="250" height="268" rx="4" fill="#fff" stroke="#666"/>
-<rect x="1060" y="80" width="250" height="28" rx="4" fill="#d5e8d4" stroke="#666"/>
-<text x="1070" y="99" font-size="13" font-weight="700" fill="#222">volunteer_field_reports</text>
-<text x="1068" y="122" font-size="10" font-weight="700" fill="#b00">PK</text>
-<text x="1094" y="122" font-size="11" fill="#222">id</text>
-<text x="1302" y="122" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="1094" y="142" font-size="11" fill="#222">reportType</text>
-<text x="1302" y="142" font-size="10" fill="#666" text-anchor="end">FieldReportType</text>
-<text x="1094" y="162" font-size="11" fill="#222">description</text>
-<text x="1302" y="162" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="1094" y="182" font-size="11" fill="#222">latitude</text>
-<text x="1302" y="182" font-size="10" fill="#666" text-anchor="end">Decimal</text>
-<text x="1094" y="202" font-size="11" fill="#222">longitude</text>
-<text x="1302" y="202" font-size="10" fill="#666" text-anchor="end">Decimal</text>
-<text x="1094" y="222" font-size="11" fill="#222">address</text>
-<text x="1302" y="222" font-size="10" fill="#666" text-anchor="end">String?</text>
-<text x="1094" y="242" font-size="11" fill="#222">severity</text>
-<text x="1302" y="242" font-size="10" fill="#666" text-anchor="end">ReportSeverity</text>
-<text x="1094" y="262" font-size="11" fill="#222">resourceName</text>
-<text x="1302" y="262" font-size="10" fill="#666" text-anchor="end">String?</text>
-<text x="1094" y="282" font-size="11" fill="#222">quantityNeeded</text>
-<text x="1302" y="282" font-size="10" fill="#666" text-anchor="end">Int?</text>
-<text x="1068" y="302" font-size="10" font-weight="700" fill="#b00">FK</text>
-<text x="1094" y="302" font-size="11" fill="#222">volunteerId</text>
-<text x="1302" y="302" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="1094" y="322" font-size="11" fill="#222">createdAt</text>
-<text x="1302" y="322" font-size="10" fill="#666" text-anchor="end">DateTime</text>
-<text x="1094" y="342" font-size="11" fill="#222">updatedAt</text>
-<text x="1302" y="342" font-size="10" fill="#666" text-anchor="end">DateTime</text>
-</g>
-<g><rect x="1400" y="80" width="250" height="288" rx="4" fill="#fff" stroke="#666"/>
-<rect x="1400" y="80" width="250" height="28" rx="4" fill="#d5e8d4" stroke="#666"/>
-<text x="1410" y="99" font-size="13" font-weight="700" fill="#222">organization_volunteer_requests</text>
-<text x="1408" y="122" font-size="10" font-weight="700" fill="#b00">PK</text>
-<text x="1434" y="122" font-size="11" fill="#222">id</text>
-<text x="1642" y="122" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="1434" y="142" font-size="11" fill="#222">title</text>
-<text x="1642" y="142" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="1434" y="162" font-size="11" fill="#222">description</text>
-<text x="1642" y="162" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="1434" y="182" font-size="11" fill="#222">requiredSkills</text>
-<text x="1642" y="182" font-size="10" fill="#666" text-anchor="end">String[]</text>
-<text x="1434" y="202" font-size="11" fill="#222">location</text>
-<text x="1642" y="202" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="1434" y="222" font-size="11" fill="#222">neededVolunteers</text>
-<text x="1642" y="222" font-size="10" fill="#666" text-anchor="end">Int</text>
-<text x="1434" y="242" font-size="11" fill="#222">disasterName</text>
-<text x="1642" y="242" font-size="10" fill="#666" text-anchor="end">String?</text>
-<text x="1434" y="262" font-size="11" fill="#222">status</text>
-<text x="1642" y="262" font-size="10" fill="#666" text-anchor="end">OrganizationRequestStatus</text>
-<text x="1434" y="282" font-size="11" fill="#222">isDeleted</text>
-<text x="1642" y="282" font-size="10" fill="#666" text-anchor="end">Boolean</text>
-<text x="1434" y="302" font-size="11" fill="#222">deletedAt</text>
-<text x="1642" y="302" font-size="10" fill="#666" text-anchor="end">DateTime?</text>
-<text x="1408" y="322" font-size="10" font-weight="700" fill="#b00">FK</text>
-<text x="1434" y="322" font-size="11" fill="#222">organizationUserId</text>
-<text x="1642" y="322" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="1434" y="342" font-size="11" fill="#222">createdAt</text>
-<text x="1642" y="342" font-size="10" fill="#666" text-anchor="end">DateTime</text>
-<text x="1434" y="362" font-size="11" fill="#222">updatedAt</text>
-<text x="1642" y="362" font-size="10" fill="#666" text-anchor="end">DateTime</text>
-</g>
-<g><rect x="40" y="678" width="250" height="148" rx="4" fill="#fff" stroke="#666"/>
-<rect x="40" y="678" width="250" height="28" rx="4" fill="#d5e8d4" stroke="#666"/>
-<text x="50" y="697" font-size="13" font-weight="700" fill="#222">volunteer_organization_joins</text>
-<text x="48" y="720" font-size="10" font-weight="700" fill="#b00">PK</text>
-<text x="74" y="720" font-size="11" fill="#222">id</text>
-<text x="282" y="720" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="74" y="740" font-size="11" fill="#222">status</text>
-<text x="282" y="740" font-size="10" fill="#666" text-anchor="end">GroupJoinStatus</text>
-<text x="74" y="760" font-size="11" fill="#222">joinedAt</text>
-<text x="282" y="760" font-size="10" fill="#666" text-anchor="end">DateTime</text>
-<text x="48" y="780" font-size="10" font-weight="700" fill="#b00">FK</text>
-<text x="74" y="780" font-size="11" fill="#222">volunteerId</text>
-<text x="282" y="780" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="48" y="800" font-size="10" font-weight="700" fill="#b00">FK</text>
-<text x="74" y="800" font-size="11" fill="#222">organizationRequestId</text>
-<text x="282" y="800" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="74" y="820" font-size="11" fill="#222">updatedAt</text>
-<text x="282" y="820" font-size="10" fill="#666" text-anchor="end">DateTime</text>
-</g>
-<g><rect x="380" y="438" width="250" height="188" rx="4" fill="#fff" stroke="#666"/>
-<rect x="380" y="438" width="250" height="28" rx="4" fill="#d5e8d4" stroke="#666"/>
-<text x="390" y="457" font-size="13" font-weight="700" fill="#222">volunteer_group_joins</text>
-<text x="388" y="480" font-size="10" font-weight="700" fill="#b00">PK</text>
-<text x="414" y="480" font-size="11" fill="#222">id</text>
-<text x="622" y="480" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="414" y="500" font-size="11" fill="#222">targetType</text>
-<text x="622" y="500" font-size="10" fill="#666" text-anchor="end">GroupTargetType</text>
-<text x="414" y="520" font-size="11" fill="#222">targetId</text>
-<text x="622" y="520" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="414" y="540" font-size="11" fill="#222">whyJoin</text>
-<text x="622" y="540" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="414" y="560" font-size="11" fill="#222">status</text>
-<text x="622" y="560" font-size="10" fill="#666" text-anchor="end">GroupJoinStatus</text>
-<text x="388" y="580" font-size="10" font-weight="700" fill="#b00">FK</text>
-<text x="414" y="580" font-size="11" fill="#222">volunteerId</text>
-<text x="622" y="580" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="414" y="600" font-size="11" fill="#222">createdAt</text>
-<text x="622" y="600" font-size="10" fill="#666" text-anchor="end">DateTime</text>
-<text x="414" y="620" font-size="11" fill="#222">updatedAt</text>
-<text x="622" y="620" font-size="10" fill="#666" text-anchor="end">DateTime</text>
-</g>
-<g><rect x="720" y="318" width="250" height="308" rx="4" fill="#fff" stroke="#666"/>
-<rect x="720" y="318" width="250" height="28" rx="4" fill="#ffe6cc" stroke="#666"/>
-<text x="730" y="337" font-size="13" font-weight="700" fill="#222">relief_orgs</text>
-<text x="728" y="360" font-size="10" font-weight="700" fill="#b00">PK</text>
-<text x="754" y="360" font-size="11" fill="#222">id</text>
-<text x="962" y="360" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="754" y="380" font-size="11" fill="#222">organizationName</text>
-<text x="962" y="380" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="728" y="400" font-size="10" font-weight="700" fill="#b00">UQ</text>
-<text x="754" y="400" font-size="11" fill="#222">registrationNumber</text>
-<text x="962" y="400" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="754" y="420" font-size="11" fill="#222">address</text>
-<text x="962" y="420" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="754" y="440" font-size="11" fill="#222">contactEmail</text>
-<text x="962" y="440" font-size="10" fill="#666" text-anchor="end">String?</text>
-<text x="754" y="460" font-size="11" fill="#222">contactPhone</text>
-<text x="962" y="460" font-size="10" fill="#666" text-anchor="end">String?</text>
-<text x="754" y="480" font-size="11" fill="#222">website</text>
-<text x="962" y="480" font-size="10" fill="#666" text-anchor="end">String?</text>
-<text x="754" y="500" font-size="11" fill="#222">description</text>
-<text x="962" y="500" font-size="10" fill="#666" text-anchor="end">String?</text>
-<text x="754" y="520" font-size="11" fill="#222">organizationType</text>
-<text x="962" y="520" font-size="10" fill="#666" text-anchor="end">String?</text>
-<text x="754" y="540" font-size="11" fill="#222">verificationDocs</text>
-<text x="962" y="540" font-size="10" fill="#666" text-anchor="end">String[]</text>
-<text x="754" y="560" font-size="11" fill="#222">adminVerified</text>
-<text x="962" y="560" font-size="10" fill="#666" text-anchor="end">Boolean</text>
-<text x="728" y="580" font-size="10" font-weight="700" fill="#b00">FK</text>
-<text x="754" y="580" font-size="11" fill="#222">userId</text>
-<text x="962" y="580" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="754" y="600" font-size="11" fill="#222">createdAt</text>
-<text x="962" y="600" font-size="10" fill="#666" text-anchor="end">DateTime</text>
-<text x="754" y="620" font-size="11" fill="#222">updatedAt</text>
-<text x="962" y="620" font-size="10" fill="#666" text-anchor="end">DateTime</text>
-</g>
-<g><rect x="1060" y="398" width="250" height="248" rx="4" fill="#fff" stroke="#666"/>
-<rect x="1060" y="398" width="250" height="28" rx="4" fill="#ffe6cc" stroke="#666"/>
-<text x="1070" y="417" font-size="13" font-weight="700" fill="#222">shelters</text>
-<text x="1068" y="440" font-size="10" font-weight="700" fill="#b00">PK</text>
-<text x="1094" y="440" font-size="11" fill="#222">id</text>
-<text x="1302" y="440" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="1094" y="460" font-size="11" fill="#222">shelterName</text>
-<text x="1302" y="460" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="1094" y="480" font-size="11" fill="#222">shelterLocation</text>
-<text x="1302" y="480" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="1094" y="500" font-size="11" fill="#222">shelterCapacity</text>
-<text x="1302" y="500" font-size="10" fill="#666" text-anchor="end">Int</text>
-<text x="1094" y="520" font-size="11" fill="#222">currentPeopleCount</text>
-<text x="1302" y="520" font-size="10" fill="#666" text-anchor="end">Int</text>
-<text x="1094" y="540" font-size="11" fill="#222">isDeleted</text>
-<text x="1302" y="540" font-size="10" fill="#666" text-anchor="end">Boolean</text>
-<text x="1094" y="560" font-size="11" fill="#222">deletedAt</text>
-<text x="1302" y="560" font-size="10" fill="#666" text-anchor="end">DateTime?</text>
-<text x="1068" y="580" font-size="10" font-weight="700" fill="#b00">FK</text>
-<text x="1094" y="580" font-size="11" fill="#222">disasterId</text>
-<text x="1302" y="580" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="1068" y="600" font-size="10" font-weight="700" fill="#b00">FK</text>
-<text x="1094" y="600" font-size="11" fill="#222">reliefOrgId</text>
-<text x="1302" y="600" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="1094" y="620" font-size="11" fill="#222">createdAt</text>
-<text x="1302" y="620" font-size="10" fill="#666" text-anchor="end">DateTime</text>
-<text x="1094" y="640" font-size="11" fill="#222">updatedAt</text>
-<text x="1302" y="640" font-size="10" fill="#666" text-anchor="end">DateTime</text>
-</g>
-<g><rect x="1400" y="418" width="250" height="228" rx="4" fill="#fff" stroke="#666"/>
-<rect x="1400" y="418" width="250" height="28" rx="4" fill="#ffe6cc" stroke="#666"/>
-<text x="1410" y="437" font-size="13" font-weight="700" fill="#222">disasters</text>
-<text x="1408" y="460" font-size="10" font-weight="700" fill="#b00">PK</text>
-<text x="1434" y="460" font-size="11" fill="#222">id</text>
-<text x="1642" y="460" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="1434" y="480" font-size="11" fill="#222">disasterName</text>
-<text x="1642" y="480" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="1434" y="500" font-size="11" fill="#222">impactedLocation</text>
-<text x="1642" y="500" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="1434" y="520" font-size="11" fill="#222">impactTime</text>
-<text x="1642" y="520" font-size="10" fill="#666" text-anchor="end">DateTime</text>
-<text x="1434" y="540" font-size="11" fill="#222">type</text>
-<text x="1642" y="540" font-size="10" fill="#666" text-anchor="end">DisasterType</text>
-<text x="1434" y="560" font-size="11" fill="#222">isVerified</text>
-<text x="1642" y="560" font-size="10" fill="#666" text-anchor="end">Boolean</text>
-<text x="1434" y="580" font-size="11" fill="#222">isDeleted</text>
-<text x="1642" y="580" font-size="10" fill="#666" text-anchor="end">Boolean</text>
-<text x="1434" y="600" font-size="11" fill="#222">deletedAt</text>
-<text x="1642" y="600" font-size="10" fill="#666" text-anchor="end">DateTime?</text>
-<text x="1434" y="620" font-size="11" fill="#222">createdAt</text>
-<text x="1642" y="620" font-size="10" fill="#666" text-anchor="end">DateTime</text>
-<text x="1434" y="640" font-size="11" fill="#222">updatedAt</text>
-<text x="1642" y="640" font-size="10" fill="#666" text-anchor="end">DateTime</text>
-</g>
-<g><rect x="40" y="876" width="250" height="348" rx="4" fill="#fff" stroke="#666"/>
-<rect x="40" y="876" width="250" height="28" rx="4" fill="#e1d5e7" stroke="#666"/>
-<text x="50" y="895" font-size="13" font-weight="700" fill="#222">missing_persons</text>
-<text x="48" y="918" font-size="10" font-weight="700" fill="#b00">PK</text>
-<text x="74" y="918" font-size="11" fill="#222">id</text>
-<text x="282" y="918" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="74" y="938" font-size="11" fill="#222">fullName</text>
-<text x="282" y="938" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="74" y="958" font-size="11" fill="#222">age</text>
-<text x="282" y="958" font-size="10" fill="#666" text-anchor="end">Int</text>
-<text x="74" y="978" font-size="11" fill="#222">gender</text>
-<text x="282" y="978" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="74" y="998" font-size="11" fill="#222">lastSeenLocation</text>
-<text x="282" y="998" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="74" y="1018" font-size="11" fill="#222">lastSeenDate</text>
-<text x="282" y="1018" font-size="10" fill="#666" text-anchor="end">DateTime</text>
-<text x="74" y="1038" font-size="11" fill="#222">photoUrl</text>
-<text x="282" y="1038" font-size="10" fill="#666" text-anchor="end">String?</text>
-<text x="74" y="1058" font-size="11" fill="#222">photoPublicId</text>
-<text x="282" y="1058" font-size="10" fill="#666" text-anchor="end">String?</text>
-<text x="74" y="1078" font-size="11" fill="#222">description</text>
-<text x="282" y="1078" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="74" y="1098" font-size="11" fill="#222">contactPhone</text>
-<text x="282" y="1098" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="74" y="1118" font-size="11" fill="#222">status</text>
-<text x="282" y="1118" font-size="10" fill="#666" text-anchor="end">MissingPersonStatus</text>
-<text x="74" y="1138" font-size="11" fill="#222">isDeleted</text>
-<text x="282" y="1138" font-size="10" fill="#666" text-anchor="end">Boolean</text>
-<text x="74" y="1158" font-size="11" fill="#222">deletedAt</text>
-<text x="282" y="1158" font-size="10" fill="#666" text-anchor="end">DateTime?</text>
-<text x="48" y="1178" font-size="10" font-weight="700" fill="#b00">FK</text>
-<text x="74" y="1178" font-size="11" fill="#222">reporterId</text>
-<text x="282" y="1178" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="74" y="1198" font-size="11" fill="#222">createdAt</text>
-<text x="282" y="1198" font-size="10" fill="#666" text-anchor="end">DateTime</text>
-<text x="74" y="1218" font-size="11" fill="#222">updatedAt</text>
-<text x="282" y="1218" font-size="10" fill="#666" text-anchor="end">DateTime</text>
-</g>
-<g><rect x="380" y="676" width="250" height="388" rx="4" fill="#fff" stroke="#666"/>
-<rect x="380" y="676" width="250" height="28" rx="4" fill="#e1d5e7" stroke="#666"/>
-<text x="390" y="695" font-size="13" font-weight="700" fill="#222">rescue_requests</text>
-<text x="388" y="718" font-size="10" font-weight="700" fill="#b00">PK</text>
-<text x="414" y="718" font-size="11" fill="#222">id</text>
-<text x="622" y="718" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="414" y="738" font-size="11" fill="#222">latitude</text>
-<text x="622" y="738" font-size="10" fill="#666" text-anchor="end">Decimal</text>
-<text x="414" y="758" font-size="11" fill="#222">longitude</text>
-<text x="622" y="758" font-size="10" fill="#666" text-anchor="end">Decimal</text>
-<text x="414" y="778" font-size="11" fill="#222">address</text>
-<text x="622" y="778" font-size="10" fill="#666" text-anchor="end">String?</text>
-<text x="414" y="798" font-size="11" fill="#222">peopleCount</text>
-<text x="622" y="798" font-size="10" fill="#666" text-anchor="end">Int</text>
-<text x="414" y="818" font-size="11" fill="#222">urgencyLevel</text>
-<text x="622" y="818" font-size="10" fill="#666" text-anchor="end">UrgencyLevel</text>
-<text x="414" y="838" font-size="11" fill="#222">photoUrl</text>
-<text x="622" y="838" font-size="10" fill="#666" text-anchor="end">String?</text>
-<text x="414" y="858" font-size="11" fill="#222">photoPublicId</text>
-<text x="622" y="858" font-size="10" fill="#666" text-anchor="end">String?</text>
-<text x="414" y="878" font-size="11" fill="#222">description</text>
-<text x="622" y="878" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="414" y="898" font-size="11" fill="#222">contactPhone</text>
-<text x="622" y="898" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="414" y="918" font-size="11" fill="#222">medicalNotes</text>
-<text x="622" y="918" font-size="10" fill="#666" text-anchor="end">String?</text>
-<text x="414" y="938" font-size="11" fill="#222">status</text>
-<text x="622" y="938" font-size="10" fill="#666" text-anchor="end">RescueStatus</text>
-<text x="414" y="958" font-size="11" fill="#222">isDeleted</text>
-<text x="622" y="958" font-size="10" fill="#666" text-anchor="end">Boolean</text>
-<text x="414" y="978" font-size="11" fill="#222">deletedAt</text>
-<text x="622" y="978" font-size="10" fill="#666" text-anchor="end">DateTime?</text>
-<text x="388" y="998" font-size="10" font-weight="700" fill="#b00">FK</text>
-<text x="414" y="998" font-size="11" fill="#222">userId</text>
-<text x="622" y="998" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="388" y="1018" font-size="10" font-weight="700" fill="#b00">FK</text>
-<text x="414" y="1018" font-size="11" fill="#222">assignedRescuerId</text>
-<text x="622" y="1018" font-size="10" fill="#666" text-anchor="end">String?</text>
-<text x="414" y="1038" font-size="11" fill="#222">createdAt</text>
-<text x="622" y="1038" font-size="10" fill="#666" text-anchor="end">DateTime</text>
-<text x="414" y="1058" font-size="11" fill="#222">updatedAt</text>
-<text x="622" y="1058" font-size="10" fill="#666" text-anchor="end">DateTime</text>
-</g>
-<g><rect x="720" y="676" width="250" height="248" rx="4" fill="#fff" stroke="#666"/>
-<rect x="720" y="676" width="250" height="28" rx="4" fill="#dae8fc" stroke="#666"/>
-<text x="730" y="695" font-size="13" font-weight="700" fill="#222">community_posts</text>
-<text x="728" y="718" font-size="10" font-weight="700" fill="#b00">PK</text>
-<text x="754" y="718" font-size="11" fill="#222">id</text>
-<text x="962" y="718" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="754" y="738" font-size="11" fill="#222">title</text>
-<text x="962" y="738" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="754" y="758" font-size="11" fill="#222">body</text>
-<text x="962" y="758" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="754" y="778" font-size="11" fill="#222">mediaUrls</text>
-<text x="962" y="778" font-size="10" fill="#666" text-anchor="end">String[]</text>
-<text x="754" y="798" font-size="11" fill="#222">status</text>
-<text x="962" y="798" font-size="10" fill="#666" text-anchor="end">PostStatus</text>
-<text x="754" y="818" font-size="11" fill="#222">bumpedAt</text>
-<text x="962" y="818" font-size="10" fill="#666" text-anchor="end">DateTime</text>
-<text x="754" y="838" font-size="11" fill="#222">isDeleted</text>
-<text x="962" y="838" font-size="10" fill="#666" text-anchor="end">Boolean</text>
-<text x="754" y="858" font-size="11" fill="#222">deletedAt</text>
-<text x="962" y="858" font-size="10" fill="#666" text-anchor="end">DateTime?</text>
-<text x="728" y="878" font-size="10" font-weight="700" fill="#b00">FK</text>
-<text x="754" y="878" font-size="11" fill="#222">authorId</text>
-<text x="962" y="878" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="754" y="898" font-size="11" fill="#222">createdAt</text>
-<text x="962" y="898" font-size="10" fill="#666" text-anchor="end">DateTime</text>
-<text x="754" y="918" font-size="11" fill="#222">updatedAt</text>
-<text x="962" y="918" font-size="10" fill="#666" text-anchor="end">DateTime</text>
-</g>
-<g><rect x="1060" y="696" width="250" height="148" rx="4" fill="#fff" stroke="#666"/>
-<rect x="1060" y="696" width="250" height="28" rx="4" fill="#dae8fc" stroke="#666"/>
-<text x="1070" y="715" font-size="13" font-weight="700" fill="#222">community_post_comments</text>
-<text x="1068" y="738" font-size="10" font-weight="700" fill="#b00">PK</text>
-<text x="1094" y="738" font-size="11" fill="#222">id</text>
-<text x="1302" y="738" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="1094" y="758" font-size="11" fill="#222">content</text>
-<text x="1302" y="758" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="1068" y="778" font-size="10" font-weight="700" fill="#b00">FK</text>
-<text x="1094" y="778" font-size="11" fill="#222">postId</text>
-<text x="1302" y="778" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="1068" y="798" font-size="10" font-weight="700" fill="#b00">FK</text>
-<text x="1094" y="798" font-size="11" fill="#222">userId</text>
-<text x="1302" y="798" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="1094" y="818" font-size="11" fill="#222">createdAt</text>
-<text x="1302" y="818" font-size="10" fill="#666" text-anchor="end">DateTime</text>
-<text x="1094" y="838" font-size="11" fill="#222">updatedAt</text>
-<text x="1302" y="838" font-size="10" fill="#666" text-anchor="end">DateTime</text>
-</g>
-<g><rect x="1400" y="696" width="250" height="148" rx="4" fill="#fff" stroke="#666"/>
-<rect x="1400" y="696" width="250" height="28" rx="4" fill="#dae8fc" stroke="#666"/>
-<text x="1410" y="715" font-size="13" font-weight="700" fill="#222">community_post_reactions</text>
-<text x="1408" y="738" font-size="10" font-weight="700" fill="#b00">PK</text>
-<text x="1434" y="738" font-size="11" fill="#222">id</text>
-<text x="1642" y="738" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="1434" y="758" font-size="11" fill="#222">type</text>
-<text x="1642" y="758" font-size="10" fill="#666" text-anchor="end">ReactionType</text>
-<text x="1408" y="778" font-size="10" font-weight="700" fill="#b00">FK</text>
-<text x="1434" y="778" font-size="11" fill="#222">postId</text>
-<text x="1642" y="778" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="1408" y="798" font-size="10" font-weight="700" fill="#b00">FK</text>
-<text x="1434" y="798" font-size="11" fill="#222">userId</text>
-<text x="1642" y="798" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="1434" y="818" font-size="11" fill="#222">createdAt</text>
-<text x="1642" y="818" font-size="10" fill="#666" text-anchor="end">DateTime</text>
-<text x="1434" y="838" font-size="11" fill="#222">updatedAt</text>
-<text x="1642" y="838" font-size="10" fill="#666" text-anchor="end">DateTime</text>
-</g>
-<g><rect x="40" y="1274" width="250" height="128" rx="4" fill="#fff" stroke="#666"/>
-<rect x="40" y="1274" width="250" height="28" rx="4" fill="#dae8fc" stroke="#666"/>
-<text x="50" y="1293" font-size="13" font-weight="700" fill="#222">community_post_reports</text>
-<text x="48" y="1316" font-size="10" font-weight="700" fill="#b00">PK</text>
-<text x="74" y="1316" font-size="11" fill="#222">id</text>
-<text x="282" y="1316" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="74" y="1336" font-size="11" fill="#222">reason</text>
-<text x="282" y="1336" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="48" y="1356" font-size="10" font-weight="700" fill="#b00">FK</text>
-<text x="74" y="1356" font-size="11" fill="#222">postId</text>
-<text x="282" y="1356" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="48" y="1376" font-size="10" font-weight="700" fill="#b00">FK</text>
-<text x="74" y="1376" font-size="11" fill="#222">reporterId</text>
-<text x="282" y="1376" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="74" y="1396" font-size="11" fill="#222">createdAt</text>
-<text x="282" y="1396" font-size="10" fill="#666" text-anchor="end">DateTime</text>
-</g>
-<g><rect x="380" y="1114" width="250" height="328" rx="4" fill="#fff" stroke="#666"/>
-<rect x="380" y="1114" width="250" height="28" rx="4" fill="#fff2cc" stroke="#666"/>
-<text x="390" y="1133" font-size="13" font-weight="700" fill="#222">donation_campaigns</text>
-<text x="388" y="1156" font-size="10" font-weight="700" fill="#b00">PK</text>
-<text x="414" y="1156" font-size="11" fill="#222">id</text>
-<text x="622" y="1156" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="414" y="1176" font-size="11" fill="#222">title</text>
-<text x="622" y="1176" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="414" y="1196" font-size="11" fill="#222">description</text>
-<text x="622" y="1196" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="414" y="1216" font-size="11" fill="#222">targetAmount</text>
-<text x="622" y="1216" font-size="10" fill="#666" text-anchor="end">Decimal</text>
-<text x="414" y="1236" font-size="11" fill="#222">raisedAmount</text>
-<text x="622" y="1236" font-size="10" fill="#666" text-anchor="end">Decimal</text>
-<text x="414" y="1256" font-size="11" fill="#222">status</text>
-<text x="622" y="1256" font-size="10" fill="#666" text-anchor="end">CampaignStatus</text>
-<text x="414" y="1276" font-size="11" fill="#222">startDate</text>
-<text x="622" y="1276" font-size="10" fill="#666" text-anchor="end">DateTime</text>
-<text x="414" y="1296" font-size="11" fill="#222">endDate</text>
-<text x="622" y="1296" font-size="10" fill="#666" text-anchor="end">DateTime</text>
-<text x="414" y="1316" font-size="11" fill="#222">photoUrl</text>
-<text x="622" y="1316" font-size="10" fill="#666" text-anchor="end">String?</text>
-<text x="414" y="1336" font-size="11" fill="#222">photoPublicId</text>
-<text x="622" y="1336" font-size="10" fill="#666" text-anchor="end">String?</text>
-<text x="414" y="1356" font-size="11" fill="#222">isDeleted</text>
-<text x="622" y="1356" font-size="10" fill="#666" text-anchor="end">Boolean</text>
-<text x="414" y="1376" font-size="11" fill="#222">deletedAt</text>
-<text x="622" y="1376" font-size="10" fill="#666" text-anchor="end">DateTime?</text>
-<text x="388" y="1396" font-size="10" font-weight="700" fill="#b00">FK</text>
-<text x="414" y="1396" font-size="11" fill="#222">createdByUserId</text>
-<text x="622" y="1396" font-size="10" fill="#666" text-anchor="end">String?</text>
-<text x="414" y="1416" font-size="11" fill="#222">createdAt</text>
-<text x="622" y="1416" font-size="10" fill="#666" text-anchor="end">DateTime</text>
-<text x="414" y="1436" font-size="11" fill="#222">updatedAt</text>
-<text x="622" y="1436" font-size="10" fill="#666" text-anchor="end">DateTime</text>
-</g>
-<g><rect x="720" y="974" width="250" height="288" rx="4" fill="#fff" stroke="#666"/>
-<rect x="720" y="974" width="250" height="28" rx="4" fill="#fff2cc" stroke="#666"/>
-<text x="730" y="993" font-size="13" font-weight="700" fill="#222">donation_applications</text>
-<text x="728" y="1016" font-size="10" font-weight="700" fill="#b00">PK</text>
-<text x="754" y="1016" font-size="11" fill="#222">id</text>
-<text x="962" y="1016" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="754" y="1036" font-size="11" fill="#222">reason</text>
-<text x="962" y="1036" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="754" y="1056" font-size="11" fill="#222">payoutDetails</text>
-<text x="962" y="1056" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="754" y="1076" font-size="11" fill="#222">proofDocumentUrl</text>
-<text x="962" y="1076" font-size="10" fill="#666" text-anchor="end">String?</text>
-<text x="754" y="1096" font-size="11" fill="#222">proofPublicId</text>
-<text x="962" y="1096" font-size="10" fill="#666" text-anchor="end">String?</text>
-<text x="754" y="1116" font-size="11" fill="#222">status</text>
-<text x="962" y="1116" font-size="10" fill="#666" text-anchor="end">ApplicationStatus</text>
-<text x="754" y="1136" font-size="11" fill="#222">approvedAmount</text>
-<text x="962" y="1136" font-size="10" fill="#666" text-anchor="end">Decimal?</text>
-<text x="754" y="1156" font-size="11" fill="#222">reviewedAt</text>
-<text x="962" y="1156" font-size="10" fill="#666" text-anchor="end">DateTime?</text>
-<text x="728" y="1176" font-size="10" font-weight="700" fill="#b00">FK</text>
-<text x="754" y="1176" font-size="11" fill="#222">campaignId</text>
-<text x="962" y="1176" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="728" y="1196" font-size="10" font-weight="700" fill="#b00">FK</text>
-<text x="754" y="1196" font-size="11" fill="#222">applicantId</text>
-<text x="962" y="1196" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="728" y="1216" font-size="10" font-weight="700" fill="#b00">FK</text>
-<text x="754" y="1216" font-size="11" fill="#222">reviewedByUserId</text>
-<text x="962" y="1216" font-size="10" fill="#666" text-anchor="end">String?</text>
-<text x="754" y="1236" font-size="11" fill="#222">createdAt</text>
-<text x="962" y="1236" font-size="10" fill="#666" text-anchor="end">DateTime</text>
-<text x="754" y="1256" font-size="11" fill="#222">updatedAt</text>
-<text x="962" y="1256" font-size="10" fill="#666" text-anchor="end">DateTime</text>
-</g>
-<g><rect x="1060" y="894" width="250" height="228" rx="4" fill="#fff" stroke="#666"/>
-<rect x="1060" y="894" width="250" height="28" rx="4" fill="#fff2cc" stroke="#666"/>
-<text x="1070" y="913" font-size="13" font-weight="700" fill="#222">donations</text>
-<text x="1068" y="936" font-size="10" font-weight="700" fill="#b00">PK</text>
-<text x="1094" y="936" font-size="11" fill="#222">id</text>
-<text x="1302" y="936" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="1094" y="956" font-size="11" fill="#222">amount</text>
-<text x="1302" y="956" font-size="10" fill="#666" text-anchor="end">Decimal</text>
-<text x="1094" y="976" font-size="11" fill="#222">status</text>
-<text x="1302" y="976" font-size="10" fill="#666" text-anchor="end">DonationStatus</text>
-<text x="1094" y="996" font-size="11" fill="#222">isAnonymous</text>
-<text x="1302" y="996" font-size="10" fill="#666" text-anchor="end">Boolean</text>
-<text x="1094" y="1016" font-size="11" fill="#222">donorName</text>
-<text x="1302" y="1016" font-size="10" fill="#666" text-anchor="end">String?</text>
-<text x="1094" y="1036" font-size="11" fill="#222">donorEmail</text>
-<text x="1302" y="1036" font-size="10" fill="#666" text-anchor="end">String?</text>
-<text x="1068" y="1056" font-size="10" font-weight="700" fill="#b00">FK</text>
-<text x="1094" y="1056" font-size="11" fill="#222">campaignId</text>
-<text x="1302" y="1056" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="1068" y="1076" font-size="10" font-weight="700" fill="#b00">FK</text>
-<text x="1094" y="1076" font-size="11" fill="#222">userId</text>
-<text x="1302" y="1076" font-size="10" fill="#666" text-anchor="end">String?</text>
-<text x="1094" y="1096" font-size="11" fill="#222">createdAt</text>
-<text x="1302" y="1096" font-size="10" fill="#666" text-anchor="end">DateTime</text>
-<text x="1094" y="1116" font-size="11" fill="#222">updatedAt</text>
-<text x="1302" y="1116" font-size="10" fill="#666" text-anchor="end">DateTime</text>
-</g>
-<g><rect x="1400" y="894" width="250" height="128" rx="4" fill="#fff" stroke="#666"/>
-<rect x="1400" y="894" width="250" height="28" rx="4" fill="#fff2cc" stroke="#666"/>
-<text x="1410" y="913" font-size="13" font-weight="700" fill="#222">donation_payouts</text>
-<text x="1408" y="936" font-size="10" font-weight="700" fill="#b00">PK</text>
-<text x="1434" y="936" font-size="11" fill="#222">id</text>
-<text x="1642" y="936" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="1434" y="956" font-size="11" fill="#222">amount</text>
-<text x="1642" y="956" font-size="10" fill="#666" text-anchor="end">Decimal</text>
-<text x="1408" y="976" font-size="10" font-weight="700" fill="#b00">FK</text>
-<text x="1434" y="976" font-size="11" fill="#222">campaignId</text>
-<text x="1642" y="976" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="1408" y="996" font-size="10" font-weight="700" fill="#b00">FK</text>
-<text x="1434" y="996" font-size="11" fill="#222">applicationId</text>
-<text x="1642" y="996" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="1434" y="1016" font-size="11" fill="#222">createdAt</text>
-<text x="1642" y="1016" font-size="10" fill="#666" text-anchor="end">DateTime</text>
-</g>
-<g><rect x="40" y="1452" width="250" height="268" rx="4" fill="#fff" stroke="#666"/>
-<rect x="40" y="1452" width="250" height="28" rx="4" fill="#fff2cc" stroke="#666"/>
-<text x="50" y="1471" font-size="13" font-weight="700" fill="#222">payments</text>
-<text x="48" y="1494" font-size="10" font-weight="700" fill="#b00">PK</text>
-<text x="74" y="1494" font-size="11" fill="#222">id</text>
-<text x="282" y="1494" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="48" y="1514" font-size="10" font-weight="700" fill="#b00">UQ</text>
-<text x="74" y="1514" font-size="11" fill="#222">transactionId</text>
-<text x="282" y="1514" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="48" y="1534" font-size="10" font-weight="700" fill="#b00">UQ</text>
-<text x="74" y="1534" font-size="11" fill="#222">providerTransactionId</text>
-<text x="282" y="1534" font-size="10" fill="#666" text-anchor="end">String?</text>
-<text x="48" y="1554" font-size="10" font-weight="700" fill="#b00">UQ</text>
-<text x="74" y="1554" font-size="11" fill="#222">providerRefundId</text>
-<text x="282" y="1554" font-size="10" fill="#666" text-anchor="end">String?</text>
-<text x="74" y="1574" font-size="11" fill="#222">amount</text>
-<text x="282" y="1574" font-size="10" fill="#666" text-anchor="end">Decimal</text>
-<text x="74" y="1594" font-size="11" fill="#222">method</text>
-<text x="282" y="1594" font-size="10" fill="#666" text-anchor="end">String?</text>
-<text x="74" y="1614" font-size="11" fill="#222">provider</text>
-<text x="282" y="1614" font-size="10" fill="#666" text-anchor="end">PaymentProvider</text>
-<text x="74" y="1634" font-size="11" fill="#222">status</text>
-<text x="282" y="1634" font-size="10" fill="#666" text-anchor="end">PaymentStatus</text>
-<text x="74" y="1654" font-size="11" fill="#222">paidAt</text>
-<text x="282" y="1654" font-size="10" fill="#666" text-anchor="end">DateTime?</text>
-<text x="48" y="1674" font-size="10" font-weight="700" fill="#b00">FK</text>
-<text x="74" y="1674" font-size="11" fill="#222">donationId</text>
-<text x="282" y="1674" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="74" y="1694" font-size="11" fill="#222">createdAt</text>
-<text x="282" y="1694" font-size="10" fill="#666" text-anchor="end">DateTime</text>
-<text x="74" y="1714" font-size="11" fill="#222">updatedAt</text>
-<text x="282" y="1714" font-size="10" fill="#666" text-anchor="end">DateTime</text>
-</g>
-<g><rect x="380" y="1492" width="250" height="188" rx="4" fill="#fff" stroke="#666"/>
-<rect x="380" y="1492" width="250" height="28" rx="4" fill="#f5f5f5" stroke="#666"/>
-<text x="390" y="1511" font-size="13" font-weight="700" fill="#222">trash_items</text>
-<text x="388" y="1534" font-size="10" font-weight="700" fill="#b00">PK</text>
-<text x="414" y="1534" font-size="11" fill="#222">id</text>
-<text x="622" y="1534" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="414" y="1554" font-size="11" fill="#222">itemType</text>
-<text x="622" y="1554" font-size="10" fill="#666" text-anchor="end">TrashItemType</text>
-<text x="414" y="1574" font-size="11" fill="#222">itemId</text>
-<text x="622" y="1574" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="414" y="1594" font-size="11" fill="#222">itemTitle</text>
-<text x="622" y="1594" font-size="10" fill="#666" text-anchor="end">String</text>
-<text x="414" y="1614" font-size="11" fill="#222">payload</text>
-<text x="622" y="1614" font-size="10" fill="#666" text-anchor="end">Json?</text>
-<text x="414" y="1634" font-size="11" fill="#222">deletedAt</text>
-<text x="622" y="1634" font-size="10" fill="#666" text-anchor="end">DateTime</text>
-<text x="414" y="1654" font-size="11" fill="#222">expiresAt</text>
-<text x="622" y="1654" font-size="10" fill="#666" text-anchor="end">DateTime</text>
-<text x="388" y="1674" font-size="10" font-weight="700" fill="#b00">FK</text>
-<text x="414" y="1674" font-size="11" fill="#222">userId</text>
-<text x="622" y="1674" font-size="10" fill="#666" text-anchor="end">String</text>
-</g>
+<svg xmlns="http://www.w3.org/2000/svg" width="5330" height="2715" viewBox="0 0 5330 2715" font-family="Roboto Mono, monospace">
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<text x="2665" y="60" font-size="40" font-weight="700" text-anchor="middle" fill="#1F2937">EDRMS — Entity Relationship Diagram</text>
+<rect x="2830" y="1505" width="540" height="410" fill="#FBFCFE" stroke="#0E8A7A" stroke-width="2"/>
+<rect x="2830" y="1505" width="540" height="50" fill="#E8F6F4" stroke="#0E8A7A" stroke-width="2"/>
+<text x="3100" y="1538" font-size="22" font-weight="700" text-anchor="middle" fill="#0E8A7A">CommunityPost</text>
+<rect x="2830" y="1555" width="540" height="30" fill="#F5F7FA" stroke="#0E8A7A" stroke-width="1"/>
+<text x="2840" y="1575" font-size="14" font-weight="700" fill="#0E8A7A">KEY</text>
+<text x="2900" y="1575" font-size="14" font-weight="700" fill="#0E8A7A">FIELD</text>
+<text x="3135" y="1575" font-size="14" font-weight="700" fill="#0E8A7A">TYPE</text>
+<rect x="2830" y="1585" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="2840" y="1605" font-size="14" fill="#0E8A7A">PK</text>
+<text x="2900" y="1605" font-size="15" fill="#1F2937">id</text>
+<text x="3135" y="1605" font-size="15" fill="#1F2937">String</text>
+<rect x="2830" y="1615" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="2840" y="1635" font-size="14" fill="#0E8A7A"></text>
+<text x="2900" y="1635" font-size="15" fill="#1F2937">title</text>
+<text x="3135" y="1635" font-size="15" fill="#1F2937">String</text>
+<rect x="2830" y="1645" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="2840" y="1665" font-size="14" fill="#0E8A7A"></text>
+<text x="2900" y="1665" font-size="15" fill="#1F2937">body</text>
+<text x="3135" y="1665" font-size="15" fill="#1F2937">String</text>
+<rect x="2830" y="1675" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="2840" y="1695" font-size="14" fill="#0E8A7A"></text>
+<text x="2900" y="1695" font-size="15" fill="#1F2937">mediaUrls</text>
+<text x="3135" y="1695" font-size="15" fill="#1F2937">String[]</text>
+<rect x="2830" y="1705" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="2840" y="1725" font-size="14" fill="#0E8A7A"></text>
+<text x="2900" y="1725" font-size="15" fill="#1F2937">status</text>
+<text x="3135" y="1725" font-size="15" fill="#1F2937">PostStatus</text>
+<rect x="2830" y="1735" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="2840" y="1755" font-size="14" fill="#0E8A7A"></text>
+<text x="2900" y="1755" font-size="15" fill="#1F2937">bumpedAt</text>
+<text x="3135" y="1755" font-size="15" fill="#1F2937">DateTime</text>
+<rect x="2830" y="1765" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="2840" y="1785" font-size="14" fill="#0E8A7A"></text>
+<text x="2900" y="1785" font-size="15" fill="#1F2937">isDeleted</text>
+<text x="3135" y="1785" font-size="15" fill="#1F2937">Boolean</text>
+<rect x="2830" y="1795" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="2840" y="1815" font-size="14" fill="#0E8A7A"></text>
+<text x="2900" y="1815" font-size="15" fill="#1F2937">deletedAt</text>
+<text x="3135" y="1815" font-size="15" fill="#1F2937">DateTime?</text>
+<rect x="2830" y="1825" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="2840" y="1845" font-size="14" fill="#0E8A7A">FK</text>
+<text x="2900" y="1845" font-size="15" fill="#1F2937">authorId</text>
+<text x="3135" y="1845" font-size="15" fill="#1F2937">String</text>
+<rect x="2830" y="1855" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="2840" y="1875" font-size="14" fill="#0E8A7A"></text>
+<text x="2900" y="1875" font-size="15" fill="#1F2937">createdAt</text>
+<text x="3135" y="1875" font-size="15" fill="#1F2937">DateTime</text>
+<rect x="2830" y="1885" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="2840" y="1905" font-size="14" fill="#0E8A7A"></text>
+<text x="2900" y="1905" font-size="15" fill="#1F2937">updatedAt</text>
+<text x="3135" y="1905" font-size="15" fill="#1F2937">DateTime</text>
+<rect x="3700" y="165" width="540" height="260" fill="#FBFCFE" stroke="#0E8A7A" stroke-width="2"/>
+<rect x="3700" y="165" width="540" height="50" fill="#E8F6F4" stroke="#0E8A7A" stroke-width="2"/>
+<text x="3970" y="198" font-size="22" font-weight="700" text-anchor="middle" fill="#0E8A7A">CommunityPostComment</text>
+<rect x="3700" y="215" width="540" height="30" fill="#F5F7FA" stroke="#0E8A7A" stroke-width="1"/>
+<text x="3710" y="235" font-size="14" font-weight="700" fill="#0E8A7A">KEY</text>
+<text x="3770" y="235" font-size="14" font-weight="700" fill="#0E8A7A">FIELD</text>
+<text x="4005" y="235" font-size="14" font-weight="700" fill="#0E8A7A">TYPE</text>
+<rect x="3700" y="245" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="3710" y="265" font-size="14" fill="#0E8A7A">PK</text>
+<text x="3770" y="265" font-size="15" fill="#1F2937">id</text>
+<text x="4005" y="265" font-size="15" fill="#1F2937">String</text>
+<rect x="3700" y="275" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="3710" y="295" font-size="14" fill="#0E8A7A"></text>
+<text x="3770" y="295" font-size="15" fill="#1F2937">content</text>
+<text x="4005" y="295" font-size="15" fill="#1F2937">String</text>
+<rect x="3700" y="305" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="3710" y="325" font-size="14" fill="#0E8A7A">FK</text>
+<text x="3770" y="325" font-size="15" fill="#1F2937">postId</text>
+<text x="4005" y="325" font-size="15" fill="#1F2937">String</text>
+<rect x="3700" y="335" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="3710" y="355" font-size="14" fill="#0E8A7A">FK</text>
+<text x="3770" y="355" font-size="15" fill="#1F2937">userId</text>
+<text x="4005" y="355" font-size="15" fill="#1F2937">String</text>
+<rect x="3700" y="365" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="3710" y="385" font-size="14" fill="#0E8A7A"></text>
+<text x="3770" y="385" font-size="15" fill="#1F2937">createdAt</text>
+<text x="4005" y="385" font-size="15" fill="#1F2937">DateTime</text>
+<rect x="3700" y="395" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="3710" y="415" font-size="14" fill="#0E8A7A"></text>
+<text x="3770" y="415" font-size="15" fill="#1F2937">updatedAt</text>
+<text x="4005" y="415" font-size="15" fill="#1F2937">DateTime</text>
+<rect x="3700" y="505" width="540" height="260" fill="#FBFCFE" stroke="#0E8A7A" stroke-width="2"/>
+<rect x="3700" y="505" width="540" height="50" fill="#E8F6F4" stroke="#0E8A7A" stroke-width="2"/>
+<text x="3970" y="538" font-size="22" font-weight="700" text-anchor="middle" fill="#0E8A7A">CommunityPostReaction</text>
+<rect x="3700" y="555" width="540" height="30" fill="#F5F7FA" stroke="#0E8A7A" stroke-width="1"/>
+<text x="3710" y="575" font-size="14" font-weight="700" fill="#0E8A7A">KEY</text>
+<text x="3770" y="575" font-size="14" font-weight="700" fill="#0E8A7A">FIELD</text>
+<text x="4005" y="575" font-size="14" font-weight="700" fill="#0E8A7A">TYPE</text>
+<rect x="3700" y="585" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="3710" y="605" font-size="14" fill="#0E8A7A">PK</text>
+<text x="3770" y="605" font-size="15" fill="#1F2937">id</text>
+<text x="4005" y="605" font-size="15" fill="#1F2937">String</text>
+<rect x="3700" y="615" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="3710" y="635" font-size="14" fill="#0E8A7A"></text>
+<text x="3770" y="635" font-size="15" fill="#1F2937">type</text>
+<text x="4005" y="635" font-size="15" fill="#1F2937">ReactionType</text>
+<rect x="3700" y="645" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="3710" y="665" font-size="14" fill="#0E8A7A">FK</text>
+<text x="3770" y="665" font-size="15" fill="#1F2937">postId</text>
+<text x="4005" y="665" font-size="15" fill="#1F2937">String</text>
+<rect x="3700" y="675" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="3710" y="695" font-size="14" fill="#0E8A7A">FK</text>
+<text x="3770" y="695" font-size="15" fill="#1F2937">userId</text>
+<text x="4005" y="695" font-size="15" fill="#1F2937">String</text>
+<rect x="3700" y="705" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="3710" y="725" font-size="14" fill="#0E8A7A"></text>
+<text x="3770" y="725" font-size="15" fill="#1F2937">createdAt</text>
+<text x="4005" y="725" font-size="15" fill="#1F2937">DateTime</text>
+<rect x="3700" y="735" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="3710" y="755" font-size="14" fill="#0E8A7A"></text>
+<text x="3770" y="755" font-size="15" fill="#1F2937">updatedAt</text>
+<text x="4005" y="755" font-size="15" fill="#1F2937">DateTime</text>
+<rect x="3700" y="845" width="540" height="230" fill="#FBFCFE" stroke="#0E8A7A" stroke-width="2"/>
+<rect x="3700" y="845" width="540" height="50" fill="#E8F6F4" stroke="#0E8A7A" stroke-width="2"/>
+<text x="3970" y="878" font-size="22" font-weight="700" text-anchor="middle" fill="#0E8A7A">CommunityPostReport</text>
+<rect x="3700" y="895" width="540" height="30" fill="#F5F7FA" stroke="#0E8A7A" stroke-width="1"/>
+<text x="3710" y="915" font-size="14" font-weight="700" fill="#0E8A7A">KEY</text>
+<text x="3770" y="915" font-size="14" font-weight="700" fill="#0E8A7A">FIELD</text>
+<text x="4005" y="915" font-size="14" font-weight="700" fill="#0E8A7A">TYPE</text>
+<rect x="3700" y="925" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="3710" y="945" font-size="14" fill="#0E8A7A">PK</text>
+<text x="3770" y="945" font-size="15" fill="#1F2937">id</text>
+<text x="4005" y="945" font-size="15" fill="#1F2937">String</text>
+<rect x="3700" y="955" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="3710" y="975" font-size="14" fill="#0E8A7A"></text>
+<text x="3770" y="975" font-size="15" fill="#1F2937">reason</text>
+<text x="4005" y="975" font-size="15" fill="#1F2937">String</text>
+<rect x="3700" y="985" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="3710" y="1005" font-size="14" fill="#0E8A7A">FK</text>
+<text x="3770" y="1005" font-size="15" fill="#1F2937">postId</text>
+<text x="4005" y="1005" font-size="15" fill="#1F2937">String</text>
+<rect x="3700" y="1015" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="3710" y="1035" font-size="14" fill="#0E8A7A">FK</text>
+<text x="3770" y="1035" font-size="15" fill="#1F2937">reporterId</text>
+<text x="4005" y="1035" font-size="15" fill="#1F2937">String</text>
+<rect x="3700" y="1045" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="3710" y="1065" font-size="14" fill="#0E8A7A"></text>
+<text x="3770" y="1065" font-size="15" fill="#1F2937">createdAt</text>
+<text x="4005" y="1065" font-size="15" fill="#1F2937">DateTime</text>
+<rect x="1090" y="1875" width="540" height="380" fill="#FBFCFE" stroke="#C46A12" stroke-width="2"/>
+<rect x="1090" y="1875" width="540" height="50" fill="#FDF2E6" stroke="#C46A12" stroke-width="2"/>
+<text x="1360" y="1908" font-size="22" font-weight="700" text-anchor="middle" fill="#C46A12">Disaster</text>
+<rect x="1090" y="1925" width="540" height="30" fill="#F5F7FA" stroke="#C46A12" stroke-width="1"/>
+<text x="1100" y="1945" font-size="14" font-weight="700" fill="#C46A12">KEY</text>
+<text x="1160" y="1945" font-size="14" font-weight="700" fill="#C46A12">FIELD</text>
+<text x="1395" y="1945" font-size="14" font-weight="700" fill="#C46A12">TYPE</text>
+<rect x="1090" y="1955" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1100" y="1975" font-size="14" fill="#C46A12">PK</text>
+<text x="1160" y="1975" font-size="15" fill="#1F2937">id</text>
+<text x="1395" y="1975" font-size="15" fill="#1F2937">String</text>
+<rect x="1090" y="1985" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1100" y="2005" font-size="14" fill="#C46A12"></text>
+<text x="1160" y="2005" font-size="15" fill="#1F2937">disasterName</text>
+<text x="1395" y="2005" font-size="15" fill="#1F2937">String</text>
+<rect x="1090" y="2015" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1100" y="2035" font-size="14" fill="#C46A12"></text>
+<text x="1160" y="2035" font-size="15" fill="#1F2937">impactedLocation</text>
+<text x="1395" y="2035" font-size="15" fill="#1F2937">String</text>
+<rect x="1090" y="2045" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1100" y="2065" font-size="14" fill="#C46A12"></text>
+<text x="1160" y="2065" font-size="15" fill="#1F2937">impactTime</text>
+<text x="1395" y="2065" font-size="15" fill="#1F2937">DateTime</text>
+<rect x="1090" y="2075" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1100" y="2095" font-size="14" fill="#C46A12"></text>
+<text x="1160" y="2095" font-size="15" fill="#1F2937">type</text>
+<text x="1395" y="2095" font-size="15" fill="#1F2937">DisasterType</text>
+<rect x="1090" y="2105" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1100" y="2125" font-size="14" fill="#C46A12"></text>
+<text x="1160" y="2125" font-size="15" fill="#1F2937">isVerified</text>
+<text x="1395" y="2125" font-size="15" fill="#1F2937">Boolean</text>
+<rect x="1090" y="2135" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1100" y="2155" font-size="14" fill="#C46A12"></text>
+<text x="1160" y="2155" font-size="15" fill="#1F2937">isDeleted</text>
+<text x="1395" y="2155" font-size="15" fill="#1F2937">Boolean</text>
+<rect x="1090" y="2165" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1100" y="2185" font-size="14" fill="#C46A12"></text>
+<text x="1160" y="2185" font-size="15" fill="#1F2937">deletedAt</text>
+<text x="1395" y="2185" font-size="15" fill="#1F2937">DateTime?</text>
+<rect x="1090" y="2195" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1100" y="2215" font-size="14" fill="#C46A12"></text>
+<text x="1160" y="2215" font-size="15" fill="#1F2937">createdAt</text>
+<text x="1395" y="2215" font-size="15" fill="#1F2937">DateTime</text>
+<rect x="1090" y="2225" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1100" y="2245" font-size="14" fill="#C46A12"></text>
+<text x="1160" y="2245" font-size="15" fill="#1F2937">updatedAt</text>
+<text x="1395" y="2245" font-size="15" fill="#1F2937">DateTime</text>
+<rect x="4570" y="165" width="540" height="530" fill="#FBFCFE" stroke="#7B4DB5" stroke-width="2"/>
+<rect x="4570" y="165" width="540" height="50" fill="#F3EEF9" stroke="#7B4DB5" stroke-width="2"/>
+<text x="4840" y="198" font-size="22" font-weight="700" text-anchor="middle" fill="#7B4DB5">DonationCampaign</text>
+<rect x="4570" y="215" width="540" height="30" fill="#F5F7FA" stroke="#7B4DB5" stroke-width="1"/>
+<text x="4580" y="235" font-size="14" font-weight="700" fill="#7B4DB5">KEY</text>
+<text x="4640" y="235" font-size="14" font-weight="700" fill="#7B4DB5">FIELD</text>
+<text x="4875" y="235" font-size="14" font-weight="700" fill="#7B4DB5">TYPE</text>
+<rect x="4570" y="245" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="265" font-size="14" fill="#7B4DB5">PK</text>
+<text x="4640" y="265" font-size="15" fill="#1F2937">id</text>
+<text x="4875" y="265" font-size="15" fill="#1F2937">String</text>
+<rect x="4570" y="275" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="295" font-size="14" fill="#7B4DB5"></text>
+<text x="4640" y="295" font-size="15" fill="#1F2937">title</text>
+<text x="4875" y="295" font-size="15" fill="#1F2937">String</text>
+<rect x="4570" y="305" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="325" font-size="14" fill="#7B4DB5"></text>
+<text x="4640" y="325" font-size="15" fill="#1F2937">description</text>
+<text x="4875" y="325" font-size="15" fill="#1F2937">String</text>
+<rect x="4570" y="335" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="355" font-size="14" fill="#7B4DB5"></text>
+<text x="4640" y="355" font-size="15" fill="#1F2937">targetAmount</text>
+<text x="4875" y="355" font-size="15" fill="#1F2937">Decimal(12,2)</text>
+<rect x="4570" y="365" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="385" font-size="14" fill="#7B4DB5"></text>
+<text x="4640" y="385" font-size="15" fill="#1F2937">raisedAmount</text>
+<text x="4875" y="385" font-size="15" fill="#1F2937">Decimal(12,2)</text>
+<rect x="4570" y="395" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="415" font-size="14" fill="#7B4DB5"></text>
+<text x="4640" y="415" font-size="15" fill="#1F2937">status</text>
+<text x="4875" y="415" font-size="15" fill="#1F2937">CampaignStatus</text>
+<rect x="4570" y="425" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="445" font-size="14" fill="#7B4DB5"></text>
+<text x="4640" y="445" font-size="15" fill="#1F2937">startDate</text>
+<text x="4875" y="445" font-size="15" fill="#1F2937">DateTime</text>
+<rect x="4570" y="455" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="475" font-size="14" fill="#7B4DB5"></text>
+<text x="4640" y="475" font-size="15" fill="#1F2937">endDate</text>
+<text x="4875" y="475" font-size="15" fill="#1F2937">DateTime</text>
+<rect x="4570" y="485" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="505" font-size="14" fill="#7B4DB5"></text>
+<text x="4640" y="505" font-size="15" fill="#1F2937">photoUrl</text>
+<text x="4875" y="505" font-size="15" fill="#1F2937">String?</text>
+<rect x="4570" y="515" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="535" font-size="14" fill="#7B4DB5"></text>
+<text x="4640" y="535" font-size="15" fill="#1F2937">photoPublicId</text>
+<text x="4875" y="535" font-size="15" fill="#1F2937">String?</text>
+<rect x="4570" y="545" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="565" font-size="14" fill="#7B4DB5"></text>
+<text x="4640" y="565" font-size="15" fill="#1F2937">isDeleted</text>
+<text x="4875" y="565" font-size="15" fill="#1F2937">Boolean</text>
+<rect x="4570" y="575" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="595" font-size="14" fill="#7B4DB5"></text>
+<text x="4640" y="595" font-size="15" fill="#1F2937">deletedAt</text>
+<text x="4875" y="595" font-size="15" fill="#1F2937">DateTime?</text>
+<rect x="4570" y="605" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="625" font-size="14" fill="#7B4DB5">FK</text>
+<text x="4640" y="625" font-size="15" fill="#1F2937">createdByUserId</text>
+<text x="4875" y="625" font-size="15" fill="#1F2937">String?</text>
+<rect x="4570" y="635" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="655" font-size="14" fill="#7B4DB5"></text>
+<text x="4640" y="655" font-size="15" fill="#1F2937">createdAt</text>
+<text x="4875" y="655" font-size="15" fill="#1F2937">DateTime</text>
+<rect x="4570" y="665" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="685" font-size="14" fill="#7B4DB5"></text>
+<text x="4640" y="685" font-size="15" fill="#1F2937">updatedAt</text>
+<text x="4875" y="685" font-size="15" fill="#1F2937">DateTime</text>
+<rect x="4570" y="775" width="540" height="470" fill="#FBFCFE" stroke="#7B4DB5" stroke-width="2"/>
+<rect x="4570" y="775" width="540" height="50" fill="#F3EEF9" stroke="#7B4DB5" stroke-width="2"/>
+<text x="4840" y="808" font-size="22" font-weight="700" text-anchor="middle" fill="#7B4DB5">DonationApplication</text>
+<rect x="4570" y="825" width="540" height="30" fill="#F5F7FA" stroke="#7B4DB5" stroke-width="1"/>
+<text x="4580" y="845" font-size="14" font-weight="700" fill="#7B4DB5">KEY</text>
+<text x="4640" y="845" font-size="14" font-weight="700" fill="#7B4DB5">FIELD</text>
+<text x="4875" y="845" font-size="14" font-weight="700" fill="#7B4DB5">TYPE</text>
+<rect x="4570" y="855" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="875" font-size="14" fill="#7B4DB5">PK</text>
+<text x="4640" y="875" font-size="15" fill="#1F2937">id</text>
+<text x="4875" y="875" font-size="15" fill="#1F2937">String</text>
+<rect x="4570" y="885" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="905" font-size="14" fill="#7B4DB5"></text>
+<text x="4640" y="905" font-size="15" fill="#1F2937">reason</text>
+<text x="4875" y="905" font-size="15" fill="#1F2937">String</text>
+<rect x="4570" y="915" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="935" font-size="14" fill="#7B4DB5"></text>
+<text x="4640" y="935" font-size="15" fill="#1F2937">payoutDetails</text>
+<text x="4875" y="935" font-size="15" fill="#1F2937">String</text>
+<rect x="4570" y="945" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="965" font-size="14" fill="#7B4DB5"></text>
+<text x="4640" y="965" font-size="15" fill="#1F2937">proofDocumentUrl</text>
+<text x="4875" y="965" font-size="15" fill="#1F2937">String?</text>
+<rect x="4570" y="975" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="995" font-size="14" fill="#7B4DB5"></text>
+<text x="4640" y="995" font-size="15" fill="#1F2937">proofPublicId</text>
+<text x="4875" y="995" font-size="15" fill="#1F2937">String?</text>
+<rect x="4570" y="1005" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="1025" font-size="14" fill="#7B4DB5"></text>
+<text x="4640" y="1025" font-size="15" fill="#1F2937">status</text>
+<text x="4875" y="1025" font-size="15" fill="#1F2937">ApplicationStatus</text>
+<rect x="4570" y="1035" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="1055" font-size="14" fill="#7B4DB5"></text>
+<text x="4640" y="1055" font-size="15" fill="#1F2937">approvedAmount</text>
+<text x="4875" y="1055" font-size="15" fill="#1F2937">Decimal(12,2)?</text>
+<rect x="4570" y="1065" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="1085" font-size="14" fill="#7B4DB5"></text>
+<text x="4640" y="1085" font-size="15" fill="#1F2937">reviewedAt</text>
+<text x="4875" y="1085" font-size="15" fill="#1F2937">DateTime?</text>
+<rect x="4570" y="1095" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="1115" font-size="14" fill="#7B4DB5">FK</text>
+<text x="4640" y="1115" font-size="15" fill="#1F2937">campaignId</text>
+<text x="4875" y="1115" font-size="15" fill="#1F2937">String</text>
+<rect x="4570" y="1125" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="1145" font-size="14" fill="#7B4DB5">FK</text>
+<text x="4640" y="1145" font-size="15" fill="#1F2937">applicantId</text>
+<text x="4875" y="1145" font-size="15" fill="#1F2937">String</text>
+<rect x="4570" y="1155" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="1175" font-size="14" fill="#7B4DB5">FK</text>
+<text x="4640" y="1175" font-size="15" fill="#1F2937">reviewedByUserId</text>
+<text x="4875" y="1175" font-size="15" fill="#1F2937">String?</text>
+<rect x="4570" y="1185" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="1205" font-size="14" fill="#7B4DB5"></text>
+<text x="4640" y="1205" font-size="15" fill="#1F2937">createdAt</text>
+<text x="4875" y="1205" font-size="15" fill="#1F2937">DateTime</text>
+<rect x="4570" y="1215" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="1235" font-size="14" fill="#7B4DB5"></text>
+<text x="4640" y="1235" font-size="15" fill="#1F2937">updatedAt</text>
+<text x="4875" y="1235" font-size="15" fill="#1F2937">DateTime</text>
+<rect x="4570" y="1325" width="540" height="380" fill="#FBFCFE" stroke="#7B4DB5" stroke-width="2"/>
+<rect x="4570" y="1325" width="540" height="50" fill="#F3EEF9" stroke="#7B4DB5" stroke-width="2"/>
+<text x="4840" y="1358" font-size="22" font-weight="700" text-anchor="middle" fill="#7B4DB5">Donation</text>
+<rect x="4570" y="1375" width="540" height="30" fill="#F5F7FA" stroke="#7B4DB5" stroke-width="1"/>
+<text x="4580" y="1395" font-size="14" font-weight="700" fill="#7B4DB5">KEY</text>
+<text x="4640" y="1395" font-size="14" font-weight="700" fill="#7B4DB5">FIELD</text>
+<text x="4875" y="1395" font-size="14" font-weight="700" fill="#7B4DB5">TYPE</text>
+<rect x="4570" y="1405" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="1425" font-size="14" fill="#7B4DB5">PK</text>
+<text x="4640" y="1425" font-size="15" fill="#1F2937">id</text>
+<text x="4875" y="1425" font-size="15" fill="#1F2937">String</text>
+<rect x="4570" y="1435" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="1455" font-size="14" fill="#7B4DB5"></text>
+<text x="4640" y="1455" font-size="15" fill="#1F2937">amount</text>
+<text x="4875" y="1455" font-size="15" fill="#1F2937">Decimal(12,2)</text>
+<rect x="4570" y="1465" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="1485" font-size="14" fill="#7B4DB5"></text>
+<text x="4640" y="1485" font-size="15" fill="#1F2937">status</text>
+<text x="4875" y="1485" font-size="15" fill="#1F2937">DonationStatus</text>
+<rect x="4570" y="1495" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="1515" font-size="14" fill="#7B4DB5"></text>
+<text x="4640" y="1515" font-size="15" fill="#1F2937">isAnonymous</text>
+<text x="4875" y="1515" font-size="15" fill="#1F2937">Boolean</text>
+<rect x="4570" y="1525" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="1545" font-size="14" fill="#7B4DB5"></text>
+<text x="4640" y="1545" font-size="15" fill="#1F2937">donorName</text>
+<text x="4875" y="1545" font-size="15" fill="#1F2937">String?</text>
+<rect x="4570" y="1555" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="1575" font-size="14" fill="#7B4DB5"></text>
+<text x="4640" y="1575" font-size="15" fill="#1F2937">donorEmail</text>
+<text x="4875" y="1575" font-size="15" fill="#1F2937">String?</text>
+<rect x="4570" y="1585" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="1605" font-size="14" fill="#7B4DB5">FK</text>
+<text x="4640" y="1605" font-size="15" fill="#1F2937">campaignId</text>
+<text x="4875" y="1605" font-size="15" fill="#1F2937">String</text>
+<rect x="4570" y="1615" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="1635" font-size="14" fill="#7B4DB5">FK</text>
+<text x="4640" y="1635" font-size="15" fill="#1F2937">userId</text>
+<text x="4875" y="1635" font-size="15" fill="#1F2937">String?</text>
+<rect x="4570" y="1645" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="1665" font-size="14" fill="#7B4DB5"></text>
+<text x="4640" y="1665" font-size="15" fill="#1F2937">createdAt</text>
+<text x="4875" y="1665" font-size="15" fill="#1F2937">DateTime</text>
+<rect x="4570" y="1675" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="1695" font-size="14" fill="#7B4DB5"></text>
+<text x="4640" y="1695" font-size="15" fill="#1F2937">updatedAt</text>
+<text x="4875" y="1695" font-size="15" fill="#1F2937">DateTime</text>
+<rect x="4570" y="1785" width="540" height="230" fill="#FBFCFE" stroke="#7B4DB5" stroke-width="2"/>
+<rect x="4570" y="1785" width="540" height="50" fill="#F3EEF9" stroke="#7B4DB5" stroke-width="2"/>
+<text x="4840" y="1818" font-size="22" font-weight="700" text-anchor="middle" fill="#7B4DB5">DonationPayout</text>
+<rect x="4570" y="1835" width="540" height="30" fill="#F5F7FA" stroke="#7B4DB5" stroke-width="1"/>
+<text x="4580" y="1855" font-size="14" font-weight="700" fill="#7B4DB5">KEY</text>
+<text x="4640" y="1855" font-size="14" font-weight="700" fill="#7B4DB5">FIELD</text>
+<text x="4875" y="1855" font-size="14" font-weight="700" fill="#7B4DB5">TYPE</text>
+<rect x="4570" y="1865" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="1885" font-size="14" fill="#7B4DB5">PK</text>
+<text x="4640" y="1885" font-size="15" fill="#1F2937">id</text>
+<text x="4875" y="1885" font-size="15" fill="#1F2937">String</text>
+<rect x="4570" y="1895" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="1915" font-size="14" fill="#7B4DB5"></text>
+<text x="4640" y="1915" font-size="15" fill="#1F2937">amount</text>
+<text x="4875" y="1915" font-size="15" fill="#1F2937">Decimal(12,2)</text>
+<rect x="4570" y="1925" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="1945" font-size="14" fill="#7B4DB5">FK</text>
+<text x="4640" y="1945" font-size="15" fill="#1F2937">campaignId</text>
+<text x="4875" y="1945" font-size="15" fill="#1F2937">String</text>
+<rect x="4570" y="1955" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="1975" font-size="14" fill="#7B4DB5">FK</text>
+<text x="4640" y="1975" font-size="15" fill="#1F2937">applicationId</text>
+<text x="4875" y="1975" font-size="15" fill="#1F2937">String</text>
+<rect x="4570" y="1985" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="2005" font-size="14" fill="#7B4DB5"></text>
+<text x="4640" y="2005" font-size="15" fill="#1F2937">createdAt</text>
+<text x="4875" y="2005" font-size="15" fill="#1F2937">DateTime</text>
+<rect x="2830" y="165" width="540" height="560" fill="#FBFCFE" stroke="#C2493A" stroke-width="2"/>
+<rect x="2830" y="165" width="540" height="50" fill="#FDEFEC" stroke="#C2493A" stroke-width="2"/>
+<text x="3100" y="198" font-size="22" font-weight="700" text-anchor="middle" fill="#C2493A">MissingPerson</text>
+<rect x="2830" y="215" width="540" height="30" fill="#F5F7FA" stroke="#C2493A" stroke-width="1"/>
+<text x="2840" y="235" font-size="14" font-weight="700" fill="#C2493A">KEY</text>
+<text x="2900" y="235" font-size="14" font-weight="700" fill="#C2493A">FIELD</text>
+<text x="3135" y="235" font-size="14" font-weight="700" fill="#C2493A">TYPE</text>
+<rect x="2830" y="245" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="2840" y="265" font-size="14" fill="#C2493A">PK</text>
+<text x="2900" y="265" font-size="15" fill="#1F2937">id</text>
+<text x="3135" y="265" font-size="15" fill="#1F2937">String</text>
+<rect x="2830" y="275" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="2840" y="295" font-size="14" fill="#C2493A"></text>
+<text x="2900" y="295" font-size="15" fill="#1F2937">fullName</text>
+<text x="3135" y="295" font-size="15" fill="#1F2937">String</text>
+<rect x="2830" y="305" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="2840" y="325" font-size="14" fill="#C2493A"></text>
+<text x="2900" y="325" font-size="15" fill="#1F2937">age</text>
+<text x="3135" y="325" font-size="15" fill="#1F2937">Int</text>
+<rect x="2830" y="335" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="2840" y="355" font-size="14" fill="#C2493A"></text>
+<text x="2900" y="355" font-size="15" fill="#1F2937">gender</text>
+<text x="3135" y="355" font-size="15" fill="#1F2937">String</text>
+<rect x="2830" y="365" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="2840" y="385" font-size="14" fill="#C2493A"></text>
+<text x="2900" y="385" font-size="15" fill="#1F2937">lastSeenLocation</text>
+<text x="3135" y="385" font-size="15" fill="#1F2937">String</text>
+<rect x="2830" y="395" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="2840" y="415" font-size="14" fill="#C2493A"></text>
+<text x="2900" y="415" font-size="15" fill="#1F2937">lastSeenDate</text>
+<text x="3135" y="415" font-size="15" fill="#1F2937">DateTime</text>
+<rect x="2830" y="425" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="2840" y="445" font-size="14" fill="#C2493A"></text>
+<text x="2900" y="445" font-size="15" fill="#1F2937">photoUrl</text>
+<text x="3135" y="445" font-size="15" fill="#1F2937">String?</text>
+<rect x="2830" y="455" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="2840" y="475" font-size="14" fill="#C2493A"></text>
+<text x="2900" y="475" font-size="15" fill="#1F2937">photoPublicId</text>
+<text x="3135" y="475" font-size="15" fill="#1F2937">String?</text>
+<rect x="2830" y="485" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="2840" y="505" font-size="14" fill="#C2493A"></text>
+<text x="2900" y="505" font-size="15" fill="#1F2937">description</text>
+<text x="3135" y="505" font-size="15" fill="#1F2937">String</text>
+<rect x="2830" y="515" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="2840" y="535" font-size="14" fill="#C2493A"></text>
+<text x="2900" y="535" font-size="15" fill="#1F2937">contactPhone</text>
+<text x="3135" y="535" font-size="15" fill="#1F2937">String</text>
+<rect x="2830" y="545" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="2840" y="565" font-size="14" fill="#C2493A"></text>
+<text x="2900" y="565" font-size="15" fill="#1F2937">status</text>
+<text x="3135" y="565" font-size="15" fill="#1F2937">MissingPersonStatus</text>
+<rect x="2830" y="575" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="2840" y="595" font-size="14" fill="#C2493A"></text>
+<text x="2900" y="595" font-size="15" fill="#1F2937">isDeleted</text>
+<text x="3135" y="595" font-size="15" fill="#1F2937">Boolean</text>
+<rect x="2830" y="605" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="2840" y="625" font-size="14" fill="#C2493A"></text>
+<text x="2900" y="625" font-size="15" fill="#1F2937">deletedAt</text>
+<text x="3135" y="625" font-size="15" fill="#1F2937">DateTime?</text>
+<rect x="2830" y="635" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="2840" y="655" font-size="14" fill="#C2493A">FK</text>
+<text x="2900" y="655" font-size="15" fill="#1F2937">reporterId</text>
+<text x="3135" y="655" font-size="15" fill="#1F2937">String</text>
+<rect x="2830" y="665" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="2840" y="685" font-size="14" fill="#C2493A"></text>
+<text x="2900" y="685" font-size="15" fill="#1F2937">createdAt</text>
+<text x="3135" y="685" font-size="15" fill="#1F2937">DateTime</text>
+<rect x="2830" y="695" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="2840" y="715" font-size="14" fill="#C2493A"></text>
+<text x="2900" y="715" font-size="15" fill="#1F2937">updatedAt</text>
+<text x="3135" y="715" font-size="15" fill="#1F2937">DateTime</text>
+<rect x="4570" y="2095" width="540" height="440" fill="#FBFCFE" stroke="#7B4DB5" stroke-width="2"/>
+<rect x="4570" y="2095" width="540" height="50" fill="#F3EEF9" stroke="#7B4DB5" stroke-width="2"/>
+<text x="4840" y="2128" font-size="22" font-weight="700" text-anchor="middle" fill="#7B4DB5">Payment</text>
+<rect x="4570" y="2145" width="540" height="30" fill="#F5F7FA" stroke="#7B4DB5" stroke-width="1"/>
+<text x="4580" y="2165" font-size="14" font-weight="700" fill="#7B4DB5">KEY</text>
+<text x="4640" y="2165" font-size="14" font-weight="700" fill="#7B4DB5">FIELD</text>
+<text x="4875" y="2165" font-size="14" font-weight="700" fill="#7B4DB5">TYPE</text>
+<rect x="4570" y="2175" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="2195" font-size="14" fill="#7B4DB5">PK</text>
+<text x="4640" y="2195" font-size="15" fill="#1F2937">id</text>
+<text x="4875" y="2195" font-size="15" fill="#1F2937">String</text>
+<rect x="4570" y="2205" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="2225" font-size="14" fill="#7B4DB5">UK</text>
+<text x="4640" y="2225" font-size="15" fill="#1F2937">transactionId</text>
+<text x="4875" y="2225" font-size="15" fill="#1F2937">String</text>
+<rect x="4570" y="2235" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="2255" font-size="14" fill="#7B4DB5">UK</text>
+<text x="4640" y="2255" font-size="15" fill="#1F2937">providerTransactionId</text>
+<text x="4875" y="2255" font-size="15" fill="#1F2937">String?</text>
+<rect x="4570" y="2265" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="2285" font-size="14" fill="#7B4DB5">UK</text>
+<text x="4640" y="2285" font-size="15" fill="#1F2937">providerRefundId</text>
+<text x="4875" y="2285" font-size="15" fill="#1F2937">String?</text>
+<rect x="4570" y="2295" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="2315" font-size="14" fill="#7B4DB5"></text>
+<text x="4640" y="2315" font-size="15" fill="#1F2937">amount</text>
+<text x="4875" y="2315" font-size="15" fill="#1F2937">Decimal(12,2)</text>
+<rect x="4570" y="2325" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="2345" font-size="14" fill="#7B4DB5"></text>
+<text x="4640" y="2345" font-size="15" fill="#1F2937">method</text>
+<text x="4875" y="2345" font-size="15" fill="#1F2937">String?</text>
+<rect x="4570" y="2355" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="2375" font-size="14" fill="#7B4DB5"></text>
+<text x="4640" y="2375" font-size="15" fill="#1F2937">provider</text>
+<text x="4875" y="2375" font-size="15" fill="#1F2937">PaymentProvider</text>
+<rect x="4570" y="2385" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="2405" font-size="14" fill="#7B4DB5"></text>
+<text x="4640" y="2405" font-size="15" fill="#1F2937">status</text>
+<text x="4875" y="2405" font-size="15" fill="#1F2937">PaymentStatus</text>
+<rect x="4570" y="2415" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="2435" font-size="14" fill="#7B4DB5"></text>
+<text x="4640" y="2435" font-size="15" fill="#1F2937">paidAt</text>
+<text x="4875" y="2435" font-size="15" fill="#1F2937">DateTime?</text>
+<rect x="4570" y="2445" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="2465" font-size="14" fill="#7B4DB5">FK</text>
+<text x="4640" y="2465" font-size="15" fill="#1F2937">donationId</text>
+<text x="4875" y="2465" font-size="15" fill="#1F2937">String</text>
+<rect x="4570" y="2475" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="2495" font-size="14" fill="#7B4DB5"></text>
+<text x="4640" y="2495" font-size="15" fill="#1F2937">createdAt</text>
+<text x="4875" y="2495" font-size="15" fill="#1F2937">DateTime</text>
+<rect x="4570" y="2505" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="4580" y="2525" font-size="14" fill="#7B4DB5"></text>
+<text x="4640" y="2525" font-size="15" fill="#1F2937">updatedAt</text>
+<text x="4875" y="2525" font-size="15" fill="#1F2937">DateTime</text>
+<rect x="1090" y="1295" width="540" height="500" fill="#FBFCFE" stroke="#C46A12" stroke-width="2"/>
+<rect x="1090" y="1295" width="540" height="50" fill="#FDF2E6" stroke="#C46A12" stroke-width="2"/>
+<text x="1360" y="1328" font-size="22" font-weight="700" text-anchor="middle" fill="#C46A12">ReliefOrg</text>
+<rect x="1090" y="1345" width="540" height="30" fill="#F5F7FA" stroke="#C46A12" stroke-width="1"/>
+<text x="1100" y="1365" font-size="14" font-weight="700" fill="#C46A12">KEY</text>
+<text x="1160" y="1365" font-size="14" font-weight="700" fill="#C46A12">FIELD</text>
+<text x="1395" y="1365" font-size="14" font-weight="700" fill="#C46A12">TYPE</text>
+<rect x="1090" y="1375" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1100" y="1395" font-size="14" fill="#C46A12">PK</text>
+<text x="1160" y="1395" font-size="15" fill="#1F2937">id</text>
+<text x="1395" y="1395" font-size="15" fill="#1F2937">String</text>
+<rect x="1090" y="1405" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1100" y="1425" font-size="14" fill="#C46A12"></text>
+<text x="1160" y="1425" font-size="15" fill="#1F2937">organizationName</text>
+<text x="1395" y="1425" font-size="15" fill="#1F2937">String</text>
+<rect x="1090" y="1435" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1100" y="1455" font-size="14" fill="#C46A12">UK</text>
+<text x="1160" y="1455" font-size="15" fill="#1F2937">registrationNumber</text>
+<text x="1395" y="1455" font-size="15" fill="#1F2937">String</text>
+<rect x="1090" y="1465" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1100" y="1485" font-size="14" fill="#C46A12"></text>
+<text x="1160" y="1485" font-size="15" fill="#1F2937">address</text>
+<text x="1395" y="1485" font-size="15" fill="#1F2937">String</text>
+<rect x="1090" y="1495" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1100" y="1515" font-size="14" fill="#C46A12"></text>
+<text x="1160" y="1515" font-size="15" fill="#1F2937">contactEmail</text>
+<text x="1395" y="1515" font-size="15" fill="#1F2937">String?</text>
+<rect x="1090" y="1525" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1100" y="1545" font-size="14" fill="#C46A12"></text>
+<text x="1160" y="1545" font-size="15" fill="#1F2937">contactPhone</text>
+<text x="1395" y="1545" font-size="15" fill="#1F2937">String?</text>
+<rect x="1090" y="1555" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1100" y="1575" font-size="14" fill="#C46A12"></text>
+<text x="1160" y="1575" font-size="15" fill="#1F2937">website</text>
+<text x="1395" y="1575" font-size="15" fill="#1F2937">String?</text>
+<rect x="1090" y="1585" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1100" y="1605" font-size="14" fill="#C46A12"></text>
+<text x="1160" y="1605" font-size="15" fill="#1F2937">description</text>
+<text x="1395" y="1605" font-size="15" fill="#1F2937">String?</text>
+<rect x="1090" y="1615" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1100" y="1635" font-size="14" fill="#C46A12"></text>
+<text x="1160" y="1635" font-size="15" fill="#1F2937">organizationType</text>
+<text x="1395" y="1635" font-size="15" fill="#1F2937">String?</text>
+<rect x="1090" y="1645" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1100" y="1665" font-size="14" fill="#C46A12"></text>
+<text x="1160" y="1665" font-size="15" fill="#1F2937">verificationDocs</text>
+<text x="1395" y="1665" font-size="15" fill="#1F2937">String[]</text>
+<rect x="1090" y="1675" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1100" y="1695" font-size="14" fill="#C46A12"></text>
+<text x="1160" y="1695" font-size="15" fill="#1F2937">adminVerified</text>
+<text x="1395" y="1695" font-size="15" fill="#1F2937">Boolean</text>
+<rect x="1090" y="1705" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1100" y="1725" font-size="14" fill="#C46A12">FK UK</text>
+<text x="1160" y="1725" font-size="15" fill="#1F2937">userId</text>
+<text x="1395" y="1725" font-size="15" fill="#1F2937">String</text>
+<rect x="1090" y="1735" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1100" y="1755" font-size="14" fill="#C46A12"></text>
+<text x="1160" y="1755" font-size="15" fill="#1F2937">createdAt</text>
+<text x="1395" y="1755" font-size="15" fill="#1F2937">DateTime</text>
+<rect x="1090" y="1765" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1100" y="1785" font-size="14" fill="#C46A12"></text>
+<text x="1160" y="1785" font-size="15" fill="#1F2937">updatedAt</text>
+<text x="1395" y="1785" font-size="15" fill="#1F2937">DateTime</text>
+<rect x="2830" y="805" width="540" height="620" fill="#FBFCFE" stroke="#C2493A" stroke-width="2"/>
+<rect x="2830" y="805" width="540" height="50" fill="#FDEFEC" stroke="#C2493A" stroke-width="2"/>
+<text x="3100" y="838" font-size="22" font-weight="700" text-anchor="middle" fill="#C2493A">RescueRequest</text>
+<rect x="2830" y="855" width="540" height="30" fill="#F5F7FA" stroke="#C2493A" stroke-width="1"/>
+<text x="2840" y="875" font-size="14" font-weight="700" fill="#C2493A">KEY</text>
+<text x="2900" y="875" font-size="14" font-weight="700" fill="#C2493A">FIELD</text>
+<text x="3135" y="875" font-size="14" font-weight="700" fill="#C2493A">TYPE</text>
+<rect x="2830" y="885" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="2840" y="905" font-size="14" fill="#C2493A">PK</text>
+<text x="2900" y="905" font-size="15" fill="#1F2937">id</text>
+<text x="3135" y="905" font-size="15" fill="#1F2937">String</text>
+<rect x="2830" y="915" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="2840" y="935" font-size="14" fill="#C2493A"></text>
+<text x="2900" y="935" font-size="15" fill="#1F2937">latitude</text>
+<text x="3135" y="935" font-size="15" fill="#1F2937">Decimal(10,7)</text>
+<rect x="2830" y="945" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="2840" y="965" font-size="14" fill="#C2493A"></text>
+<text x="2900" y="965" font-size="15" fill="#1F2937">longitude</text>
+<text x="3135" y="965" font-size="15" fill="#1F2937">Decimal(10,7)</text>
+<rect x="2830" y="975" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="2840" y="995" font-size="14" fill="#C2493A"></text>
+<text x="2900" y="995" font-size="15" fill="#1F2937">address</text>
+<text x="3135" y="995" font-size="15" fill="#1F2937">String?</text>
+<rect x="2830" y="1005" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="2840" y="1025" font-size="14" fill="#C2493A"></text>
+<text x="2900" y="1025" font-size="15" fill="#1F2937">peopleCount</text>
+<text x="3135" y="1025" font-size="15" fill="#1F2937">Int</text>
+<rect x="2830" y="1035" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="2840" y="1055" font-size="14" fill="#C2493A"></text>
+<text x="2900" y="1055" font-size="15" fill="#1F2937">urgencyLevel</text>
+<text x="3135" y="1055" font-size="15" fill="#1F2937">UrgencyLevel</text>
+<rect x="2830" y="1065" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="2840" y="1085" font-size="14" fill="#C2493A"></text>
+<text x="2900" y="1085" font-size="15" fill="#1F2937">photoUrl</text>
+<text x="3135" y="1085" font-size="15" fill="#1F2937">String?</text>
+<rect x="2830" y="1095" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="2840" y="1115" font-size="14" fill="#C2493A"></text>
+<text x="2900" y="1115" font-size="15" fill="#1F2937">photoPublicId</text>
+<text x="3135" y="1115" font-size="15" fill="#1F2937">String?</text>
+<rect x="2830" y="1125" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="2840" y="1145" font-size="14" fill="#C2493A"></text>
+<text x="2900" y="1145" font-size="15" fill="#1F2937">description</text>
+<text x="3135" y="1145" font-size="15" fill="#1F2937">String</text>
+<rect x="2830" y="1155" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="2840" y="1175" font-size="14" fill="#C2493A"></text>
+<text x="2900" y="1175" font-size="15" fill="#1F2937">contactPhone</text>
+<text x="3135" y="1175" font-size="15" fill="#1F2937">String</text>
+<rect x="2830" y="1185" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="2840" y="1205" font-size="14" fill="#C2493A"></text>
+<text x="2900" y="1205" font-size="15" fill="#1F2937">medicalNotes</text>
+<text x="3135" y="1205" font-size="15" fill="#1F2937">String?</text>
+<rect x="2830" y="1215" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="2840" y="1235" font-size="14" fill="#C2493A"></text>
+<text x="2900" y="1235" font-size="15" fill="#1F2937">status</text>
+<text x="3135" y="1235" font-size="15" fill="#1F2937">RescueStatus</text>
+<rect x="2830" y="1245" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="2840" y="1265" font-size="14" fill="#C2493A"></text>
+<text x="2900" y="1265" font-size="15" fill="#1F2937">isDeleted</text>
+<text x="3135" y="1265" font-size="15" fill="#1F2937">Boolean</text>
+<rect x="2830" y="1275" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="2840" y="1295" font-size="14" fill="#C2493A"></text>
+<text x="2900" y="1295" font-size="15" fill="#1F2937">deletedAt</text>
+<text x="3135" y="1295" font-size="15" fill="#1F2937">DateTime?</text>
+<rect x="2830" y="1305" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="2840" y="1325" font-size="14" fill="#C2493A">FK</text>
+<text x="2900" y="1325" font-size="15" fill="#1F2937">userId</text>
+<text x="3135" y="1325" font-size="15" fill="#1F2937">String</text>
+<rect x="2830" y="1335" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="2840" y="1355" font-size="14" fill="#C2493A">FK</text>
+<text x="2900" y="1355" font-size="15" fill="#1F2937">assignedRescuerId</text>
+<text x="3135" y="1355" font-size="15" fill="#1F2937">String?</text>
+<rect x="2830" y="1365" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="2840" y="1385" font-size="14" fill="#C2493A"></text>
+<text x="2900" y="1385" font-size="15" fill="#1F2937">createdAt</text>
+<text x="3135" y="1385" font-size="15" fill="#1F2937">DateTime</text>
+<rect x="2830" y="1395" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="2840" y="1415" font-size="14" fill="#C2493A"></text>
+<text x="2900" y="1415" font-size="15" fill="#1F2937">updatedAt</text>
+<text x="3135" y="1415" font-size="15" fill="#1F2937">DateTime</text>
+<rect x="1960" y="1505" width="540" height="410" fill="#FBFCFE" stroke="#C46A12" stroke-width="2"/>
+<rect x="1960" y="1505" width="540" height="50" fill="#FDF2E6" stroke="#C46A12" stroke-width="2"/>
+<text x="2230" y="1538" font-size="22" font-weight="700" text-anchor="middle" fill="#C46A12">Shelter</text>
+<rect x="1960" y="1555" width="540" height="30" fill="#F5F7FA" stroke="#C46A12" stroke-width="1"/>
+<text x="1970" y="1575" font-size="14" font-weight="700" fill="#C46A12">KEY</text>
+<text x="2030" y="1575" font-size="14" font-weight="700" fill="#C46A12">FIELD</text>
+<text x="2265" y="1575" font-size="14" font-weight="700" fill="#C46A12">TYPE</text>
+<rect x="1960" y="1585" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1970" y="1605" font-size="14" fill="#C46A12">PK</text>
+<text x="2030" y="1605" font-size="15" fill="#1F2937">id</text>
+<text x="2265" y="1605" font-size="15" fill="#1F2937">String</text>
+<rect x="1960" y="1615" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1970" y="1635" font-size="14" fill="#C46A12"></text>
+<text x="2030" y="1635" font-size="15" fill="#1F2937">shelterName</text>
+<text x="2265" y="1635" font-size="15" fill="#1F2937">String</text>
+<rect x="1960" y="1645" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1970" y="1665" font-size="14" fill="#C46A12"></text>
+<text x="2030" y="1665" font-size="15" fill="#1F2937">shelterLocation</text>
+<text x="2265" y="1665" font-size="15" fill="#1F2937">String</text>
+<rect x="1960" y="1675" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1970" y="1695" font-size="14" fill="#C46A12"></text>
+<text x="2030" y="1695" font-size="15" fill="#1F2937">shelterCapacity</text>
+<text x="2265" y="1695" font-size="15" fill="#1F2937">Int</text>
+<rect x="1960" y="1705" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1970" y="1725" font-size="14" fill="#C46A12"></text>
+<text x="2030" y="1725" font-size="15" fill="#1F2937">currentPeopleCount</text>
+<text x="2265" y="1725" font-size="15" fill="#1F2937">Int</text>
+<rect x="1960" y="1735" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1970" y="1755" font-size="14" fill="#C46A12"></text>
+<text x="2030" y="1755" font-size="15" fill="#1F2937">isDeleted</text>
+<text x="2265" y="1755" font-size="15" fill="#1F2937">Boolean</text>
+<rect x="1960" y="1765" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1970" y="1785" font-size="14" fill="#C46A12"></text>
+<text x="2030" y="1785" font-size="15" fill="#1F2937">deletedAt</text>
+<text x="2265" y="1785" font-size="15" fill="#1F2937">DateTime?</text>
+<rect x="1960" y="1795" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1970" y="1815" font-size="14" fill="#C46A12">FK</text>
+<text x="2030" y="1815" font-size="15" fill="#1F2937">disasterId</text>
+<text x="2265" y="1815" font-size="15" fill="#1F2937">String</text>
+<rect x="1960" y="1825" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1970" y="1845" font-size="14" fill="#C46A12">FK</text>
+<text x="2030" y="1845" font-size="15" fill="#1F2937">reliefOrgId</text>
+<text x="2265" y="1845" font-size="15" fill="#1F2937">String</text>
+<rect x="1960" y="1855" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1970" y="1875" font-size="14" fill="#C46A12"></text>
+<text x="2030" y="1875" font-size="15" fill="#1F2937">createdAt</text>
+<text x="2265" y="1875" font-size="15" fill="#1F2937">DateTime</text>
+<rect x="1960" y="1885" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1970" y="1905" font-size="14" fill="#C46A12"></text>
+<text x="2030" y="1905" font-size="15" fill="#1F2937">updatedAt</text>
+<text x="2265" y="1905" font-size="15" fill="#1F2937">DateTime</text>
+<rect x="1960" y="1105" width="540" height="320" fill="#FBFCFE" stroke="#2F5FB3" stroke-width="2"/>
+<rect x="1960" y="1105" width="540" height="50" fill="#EEF3FB" stroke="#2F5FB3" stroke-width="2"/>
+<text x="2230" y="1138" font-size="22" font-weight="700" text-anchor="middle" fill="#2F5FB3">TrashItem</text>
+<rect x="1960" y="1155" width="540" height="30" fill="#F5F7FA" stroke="#2F5FB3" stroke-width="1"/>
+<text x="1970" y="1175" font-size="14" font-weight="700" fill="#2F5FB3">KEY</text>
+<text x="2030" y="1175" font-size="14" font-weight="700" fill="#2F5FB3">FIELD</text>
+<text x="2265" y="1175" font-size="14" font-weight="700" fill="#2F5FB3">TYPE</text>
+<rect x="1960" y="1185" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1970" y="1205" font-size="14" fill="#2F5FB3">PK</text>
+<text x="2030" y="1205" font-size="15" fill="#1F2937">id</text>
+<text x="2265" y="1205" font-size="15" fill="#1F2937">String</text>
+<rect x="1960" y="1215" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1970" y="1235" font-size="14" fill="#2F5FB3"></text>
+<text x="2030" y="1235" font-size="15" fill="#1F2937">itemType</text>
+<text x="2265" y="1235" font-size="15" fill="#1F2937">TrashItemType</text>
+<rect x="1960" y="1245" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1970" y="1265" font-size="14" fill="#2F5FB3"></text>
+<text x="2030" y="1265" font-size="15" fill="#1F2937">itemId</text>
+<text x="2265" y="1265" font-size="15" fill="#1F2937">String</text>
+<rect x="1960" y="1275" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1970" y="1295" font-size="14" fill="#2F5FB3"></text>
+<text x="2030" y="1295" font-size="15" fill="#1F2937">itemTitle</text>
+<text x="2265" y="1295" font-size="15" fill="#1F2937">String</text>
+<rect x="1960" y="1305" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1970" y="1325" font-size="14" fill="#2F5FB3"></text>
+<text x="2030" y="1325" font-size="15" fill="#1F2937">payload</text>
+<text x="2265" y="1325" font-size="15" fill="#1F2937">Json?</text>
+<rect x="1960" y="1335" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1970" y="1355" font-size="14" fill="#2F5FB3"></text>
+<text x="2030" y="1355" font-size="15" fill="#1F2937">deletedAt</text>
+<text x="2265" y="1355" font-size="15" fill="#1F2937">DateTime</text>
+<rect x="1960" y="1365" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1970" y="1385" font-size="14" fill="#2F5FB3"></text>
+<text x="2030" y="1385" font-size="15" fill="#1F2937">expiresAt</text>
+<text x="2265" y="1385" font-size="15" fill="#1F2937">DateTime</text>
+<rect x="1960" y="1395" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1970" y="1415" font-size="14" fill="#2F5FB3">FK</text>
+<text x="2030" y="1415" font-size="15" fill="#1F2937">userId</text>
+<text x="2265" y="1415" font-size="15" fill="#1F2937">String</text>
+<rect x="1960" y="165" width="540" height="860" fill="#FBFCFE" stroke="#2F5FB3" stroke-width="2"/>
+<rect x="1960" y="165" width="540" height="50" fill="#EEF3FB" stroke="#2F5FB3" stroke-width="2"/>
+<text x="2230" y="198" font-size="22" font-weight="700" text-anchor="middle" fill="#2F5FB3">User</text>
+<rect x="1960" y="215" width="540" height="30" fill="#F5F7FA" stroke="#2F5FB3" stroke-width="1"/>
+<text x="1970" y="235" font-size="14" font-weight="700" fill="#2F5FB3">KEY</text>
+<text x="2030" y="235" font-size="14" font-weight="700" fill="#2F5FB3">FIELD</text>
+<text x="2265" y="235" font-size="14" font-weight="700" fill="#2F5FB3">TYPE</text>
+<rect x="1960" y="245" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1970" y="265" font-size="14" fill="#2F5FB3">PK</text>
+<text x="2030" y="265" font-size="15" fill="#1F2937">id</text>
+<text x="2265" y="265" font-size="15" fill="#1F2937">String</text>
+<rect x="1960" y="275" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1970" y="295" font-size="14" fill="#2F5FB3"></text>
+<text x="2030" y="295" font-size="15" fill="#1F2937">name</text>
+<text x="2265" y="295" font-size="15" fill="#1F2937">String</text>
+<rect x="1960" y="305" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1970" y="325" font-size="14" fill="#2F5FB3">UK</text>
+<text x="2030" y="325" font-size="15" fill="#1F2937">email</text>
+<text x="2265" y="325" font-size="15" fill="#1F2937">String</text>
+<rect x="1960" y="335" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1970" y="355" font-size="14" fill="#2F5FB3"></text>
+<text x="2030" y="355" font-size="15" fill="#1F2937">password</text>
+<text x="2265" y="355" font-size="15" fill="#1F2937">String?</text>
+<rect x="1960" y="365" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1970" y="385" font-size="14" fill="#2F5FB3">UK</text>
+<text x="2030" y="385" font-size="15" fill="#1F2937">googleId</text>
+<text x="2265" y="385" font-size="15" fill="#1F2937">String?</text>
+<rect x="1960" y="395" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1970" y="415" font-size="14" fill="#2F5FB3"></text>
+<text x="2030" y="415" font-size="15" fill="#1F2937">authProvider</text>
+<text x="2265" y="415" font-size="15" fill="#1F2937">AuthProvider</text>
+<rect x="1960" y="425" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1970" y="445" font-size="14" fill="#2F5FB3"></text>
+<text x="2030" y="445" font-size="15" fill="#1F2937">emailVerified</text>
+<text x="2265" y="445" font-size="15" fill="#1F2937">Boolean</text>
+<rect x="1960" y="455" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1970" y="475" font-size="14" fill="#2F5FB3"></text>
+<text x="2030" y="475" font-size="15" fill="#1F2937">role</text>
+<text x="2265" y="475" font-size="15" fill="#1F2937">UserRole</text>
+<rect x="1960" y="485" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1970" y="505" font-size="14" fill="#2F5FB3"></text>
+<text x="2030" y="505" font-size="15" fill="#1F2937">status</text>
+<text x="2265" y="505" font-size="15" fill="#1F2937">UserStatus</text>
+<rect x="1960" y="515" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1970" y="535" font-size="14" fill="#2F5FB3"></text>
+<text x="2030" y="535" font-size="15" fill="#1F2937">needPasswordChange</text>
+<text x="2265" y="535" font-size="15" fill="#1F2937">Boolean</text>
+<rect x="1960" y="545" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1970" y="565" font-size="14" fill="#2F5FB3"></text>
+<text x="2030" y="565" font-size="15" fill="#1F2937">imageUrl</text>
+<text x="2265" y="565" font-size="15" fill="#1F2937">String</text>
+<rect x="1960" y="575" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1970" y="595" font-size="14" fill="#2F5FB3"></text>
+<text x="2030" y="595" font-size="15" fill="#1F2937">imagePublicId</text>
+<text x="2265" y="595" font-size="15" fill="#1F2937">String</text>
+<rect x="1960" y="605" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1970" y="625" font-size="14" fill="#2F5FB3">UK</text>
+<text x="2030" y="625" font-size="15" fill="#1F2937">phone</text>
+<text x="2265" y="625" font-size="15" fill="#1F2937">String?</text>
+<rect x="1960" y="635" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1970" y="655" font-size="14" fill="#2F5FB3"></text>
+<text x="2030" y="655" font-size="15" fill="#1F2937">house</text>
+<text x="2265" y="655" font-size="15" fill="#1F2937">String?</text>
+<rect x="1960" y="665" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1970" y="685" font-size="14" fill="#2F5FB3"></text>
+<text x="2030" y="685" font-size="15" fill="#1F2937">city</text>
+<text x="2265" y="685" font-size="15" fill="#1F2937">String?</text>
+<rect x="1960" y="695" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1970" y="715" font-size="14" fill="#2F5FB3"></text>
+<text x="2030" y="715" font-size="15" fill="#1F2937">district</text>
+<text x="2265" y="715" font-size="15" fill="#1F2937">String?</text>
+<rect x="1960" y="725" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1970" y="745" font-size="14" fill="#2F5FB3"></text>
+<text x="2030" y="745" font-size="15" fill="#1F2937">country</text>
+<text x="2265" y="745" font-size="15" fill="#1F2937">String?</text>
+<rect x="1960" y="755" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1970" y="775" font-size="14" fill="#2F5FB3"></text>
+<text x="2030" y="775" font-size="15" fill="#1F2937">gpsLat</text>
+<text x="2265" y="775" font-size="15" fill="#1F2937">Decimal(10,7)?</text>
+<rect x="1960" y="785" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1970" y="805" font-size="14" fill="#2F5FB3"></text>
+<text x="2030" y="805" font-size="15" fill="#1F2937">gpsLng</text>
+<text x="2265" y="805" font-size="15" fill="#1F2937">Decimal(10,7)?</text>
+<rect x="1960" y="815" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1970" y="835" font-size="14" fill="#2F5FB3"></text>
+<text x="2030" y="835" font-size="15" fill="#1F2937">isSafe</text>
+<text x="2265" y="835" font-size="15" fill="#1F2937">Boolean?</text>
+<rect x="1960" y="845" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1970" y="865" font-size="14" fill="#2F5FB3"></text>
+<text x="2030" y="865" font-size="15" fill="#1F2937">emergencyMessage</text>
+<text x="2265" y="865" font-size="15" fill="#1F2937">String?</text>
+<rect x="1960" y="875" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1970" y="895" font-size="14" fill="#2F5FB3"></text>
+<text x="2030" y="895" font-size="15" fill="#1F2937">medicalInformation</text>
+<text x="2265" y="895" font-size="15" fill="#1F2937">String?</text>
+<rect x="1960" y="905" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1970" y="925" font-size="14" fill="#2F5FB3"></text>
+<text x="2030" y="925" font-size="15" fill="#1F2937">isDeleted</text>
+<text x="2265" y="925" font-size="15" fill="#1F2937">Boolean</text>
+<rect x="1960" y="935" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1970" y="955" font-size="14" fill="#2F5FB3"></text>
+<text x="2030" y="955" font-size="15" fill="#1F2937">deletedAt</text>
+<text x="2265" y="955" font-size="15" fill="#1F2937">DateTime?</text>
+<rect x="1960" y="965" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1970" y="985" font-size="14" fill="#2F5FB3"></text>
+<text x="2030" y="985" font-size="15" fill="#1F2937">createdAt</text>
+<text x="2265" y="985" font-size="15" fill="#1F2937">DateTime</text>
+<rect x="1960" y="995" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1970" y="1015" font-size="14" fill="#2F5FB3"></text>
+<text x="2030" y="1015" font-size="15" fill="#1F2937">updatedAt</text>
+<text x="2265" y="1015" font-size="15" fill="#1F2937">DateTime</text>
+<rect x="1090" y="165" width="540" height="500" fill="#FBFCFE" stroke="#1F7A3F" stroke-width="2"/>
+<rect x="1090" y="165" width="540" height="50" fill="#EAF5EE" stroke="#1F7A3F" stroke-width="2"/>
+<text x="1360" y="198" font-size="22" font-weight="700" text-anchor="middle" fill="#1F7A3F">Volunteer</text>
+<rect x="1090" y="215" width="540" height="30" fill="#F5F7FA" stroke="#1F7A3F" stroke-width="1"/>
+<text x="1100" y="235" font-size="14" font-weight="700" fill="#1F7A3F">KEY</text>
+<text x="1160" y="235" font-size="14" font-weight="700" fill="#1F7A3F">FIELD</text>
+<text x="1395" y="235" font-size="14" font-weight="700" fill="#1F7A3F">TYPE</text>
+<rect x="1090" y="245" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1100" y="265" font-size="14" fill="#1F7A3F">PK</text>
+<text x="1160" y="265" font-size="15" fill="#1F2937">id</text>
+<text x="1395" y="265" font-size="15" fill="#1F2937">String</text>
+<rect x="1090" y="275" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1100" y="295" font-size="14" fill="#1F7A3F"></text>
+<text x="1160" y="295" font-size="15" fill="#1F2937">skills</text>
+<text x="1395" y="295" font-size="15" fill="#1F2937">VolunteerSkill[]</text>
+<rect x="1090" y="305" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1100" y="325" font-size="14" fill="#1F7A3F"></text>
+<text x="1160" y="325" font-size="15" fill="#1F2937">whyJoin</text>
+<text x="1395" y="325" font-size="15" fill="#1F2937">String</text>
+<rect x="1090" y="335" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1100" y="355" font-size="14" fill="#1F7A3F"></text>
+<text x="1160" y="355" font-size="15" fill="#1F2937">nidCardUrl</text>
+<text x="1395" y="355" font-size="15" fill="#1F2937">String?</text>
+<rect x="1090" y="365" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1100" y="385" font-size="14" fill="#1F7A3F"></text>
+<text x="1160" y="385" font-size="15" fill="#1F2937">nidCardPublicId</text>
+<text x="1395" y="385" font-size="15" fill="#1F2937">String?</text>
+<rect x="1090" y="395" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1100" y="415" font-size="14" fill="#1F7A3F"></text>
+<text x="1160" y="415" font-size="15" fill="#1F2937">available</text>
+<text x="1395" y="415" font-size="15" fill="#1F2937">Boolean</text>
+<rect x="1090" y="425" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1100" y="445" font-size="14" fill="#1F7A3F"></text>
+<text x="1160" y="445" font-size="15" fill="#1F2937">verificationStatus</text>
+<text x="1395" y="445" font-size="15" fill="#1F2937">VolunteerVerificationStatus</text>
+<rect x="1090" y="455" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1100" y="475" font-size="14" fill="#1F7A3F"></text>
+<text x="1160" y="475" font-size="15" fill="#1F2937">currentLatitude</text>
+<text x="1395" y="475" font-size="15" fill="#1F2937">Decimal(10,7)?</text>
+<rect x="1090" y="485" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1100" y="505" font-size="14" fill="#1F7A3F"></text>
+<text x="1160" y="505" font-size="15" fill="#1F2937">currentLongitude</text>
+<text x="1395" y="505" font-size="15" fill="#1F2937">Decimal(10,7)?</text>
+<rect x="1090" y="515" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1100" y="535" font-size="14" fill="#1F7A3F"></text>
+<text x="1160" y="535" font-size="15" fill="#1F2937">onDuty</text>
+<text x="1395" y="535" font-size="15" fill="#1F2937">Boolean</text>
+<rect x="1090" y="545" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1100" y="565" font-size="14" fill="#1F7A3F"></text>
+<text x="1160" y="565" font-size="15" fill="#1F2937">lastLocationUpdate</text>
+<text x="1395" y="565" font-size="15" fill="#1F2937">DateTime?</text>
+<rect x="1090" y="575" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1100" y="595" font-size="14" fill="#1F7A3F">FK UK</text>
+<text x="1160" y="595" font-size="15" fill="#1F2937">userId</text>
+<text x="1395" y="595" font-size="15" fill="#1F2937">String</text>
+<rect x="1090" y="605" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1100" y="625" font-size="14" fill="#1F7A3F"></text>
+<text x="1160" y="625" font-size="15" fill="#1F2937">createdAt</text>
+<text x="1395" y="625" font-size="15" fill="#1F2937">DateTime</text>
+<rect x="1090" y="635" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1100" y="655" font-size="14" fill="#1F7A3F"></text>
+<text x="1160" y="655" font-size="15" fill="#1F2937">updatedAt</text>
+<text x="1395" y="655" font-size="15" fill="#1F2937">DateTime</text>
+<rect x="220" y="165" width="540" height="320" fill="#FBFCFE" stroke="#1F7A3F" stroke-width="2"/>
+<rect x="220" y="165" width="540" height="50" fill="#EAF5EE" stroke="#1F7A3F" stroke-width="2"/>
+<text x="490" y="198" font-size="22" font-weight="700" text-anchor="middle" fill="#1F7A3F">VolunteerTask</text>
+<rect x="220" y="215" width="540" height="30" fill="#F5F7FA" stroke="#1F7A3F" stroke-width="1"/>
+<text x="230" y="235" font-size="14" font-weight="700" fill="#1F7A3F">KEY</text>
+<text x="290" y="235" font-size="14" font-weight="700" fill="#1F7A3F">FIELD</text>
+<text x="525" y="235" font-size="14" font-weight="700" fill="#1F7A3F">TYPE</text>
+<rect x="220" y="245" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="230" y="265" font-size="14" fill="#1F7A3F">PK</text>
+<text x="290" y="265" font-size="15" fill="#1F2937">id</text>
+<text x="525" y="265" font-size="15" fill="#1F2937">String</text>
+<rect x="220" y="275" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="230" y="295" font-size="14" fill="#1F7A3F"></text>
+<text x="290" y="295" font-size="15" fill="#1F2937">status</text>
+<text x="525" y="295" font-size="15" fill="#1F2937">VolunteerTaskStatus</text>
+<rect x="220" y="305" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="230" y="325" font-size="14" fill="#1F7A3F"></text>
+<text x="290" y="325" font-size="15" fill="#1F2937">progressNote</text>
+<text x="525" y="325" font-size="15" fill="#1F2937">String?</text>
+<rect x="220" y="335" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="230" y="355" font-size="14" fill="#1F7A3F"></text>
+<text x="290" y="355" font-size="15" fill="#1F2937">completedAt</text>
+<text x="525" y="355" font-size="15" fill="#1F2937">DateTime?</text>
+<rect x="220" y="365" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="230" y="385" font-size="14" fill="#1F7A3F">FK</text>
+<text x="290" y="385" font-size="15" fill="#1F2937">volunteerId</text>
+<text x="525" y="385" font-size="15" fill="#1F2937">String</text>
+<rect x="220" y="395" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="230" y="415" font-size="14" fill="#1F7A3F">FK</text>
+<text x="290" y="415" font-size="15" fill="#1F2937">rescueRequestId</text>
+<text x="525" y="415" font-size="15" fill="#1F2937">String</text>
+<rect x="220" y="425" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="230" y="445" font-size="14" fill="#1F7A3F"></text>
+<text x="290" y="445" font-size="15" fill="#1F2937">createdAt</text>
+<text x="525" y="445" font-size="15" fill="#1F2937">DateTime</text>
+<rect x="220" y="455" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="230" y="475" font-size="14" fill="#1F7A3F"></text>
+<text x="290" y="475" font-size="15" fill="#1F2937">updatedAt</text>
+<text x="525" y="475" font-size="15" fill="#1F2937">DateTime</text>
+<rect x="220" y="565" width="540" height="440" fill="#FBFCFE" stroke="#1F7A3F" stroke-width="2"/>
+<rect x="220" y="565" width="540" height="50" fill="#EAF5EE" stroke="#1F7A3F" stroke-width="2"/>
+<text x="490" y="598" font-size="22" font-weight="700" text-anchor="middle" fill="#1F7A3F">FieldReport</text>
+<rect x="220" y="615" width="540" height="30" fill="#F5F7FA" stroke="#1F7A3F" stroke-width="1"/>
+<text x="230" y="635" font-size="14" font-weight="700" fill="#1F7A3F">KEY</text>
+<text x="290" y="635" font-size="14" font-weight="700" fill="#1F7A3F">FIELD</text>
+<text x="525" y="635" font-size="14" font-weight="700" fill="#1F7A3F">TYPE</text>
+<rect x="220" y="645" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="230" y="665" font-size="14" fill="#1F7A3F">PK</text>
+<text x="290" y="665" font-size="15" fill="#1F2937">id</text>
+<text x="525" y="665" font-size="15" fill="#1F2937">String</text>
+<rect x="220" y="675" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="230" y="695" font-size="14" fill="#1F7A3F"></text>
+<text x="290" y="695" font-size="15" fill="#1F2937">reportType</text>
+<text x="525" y="695" font-size="15" fill="#1F2937">FieldReportType</text>
+<rect x="220" y="705" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="230" y="725" font-size="14" fill="#1F7A3F"></text>
+<text x="290" y="725" font-size="15" fill="#1F2937">description</text>
+<text x="525" y="725" font-size="15" fill="#1F2937">String</text>
+<rect x="220" y="735" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="230" y="755" font-size="14" fill="#1F7A3F"></text>
+<text x="290" y="755" font-size="15" fill="#1F2937">latitude</text>
+<text x="525" y="755" font-size="15" fill="#1F2937">Decimal(10,7)</text>
+<rect x="220" y="765" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="230" y="785" font-size="14" fill="#1F7A3F"></text>
+<text x="290" y="785" font-size="15" fill="#1F2937">longitude</text>
+<text x="525" y="785" font-size="15" fill="#1F2937">Decimal(10,7)</text>
+<rect x="220" y="795" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="230" y="815" font-size="14" fill="#1F7A3F"></text>
+<text x="290" y="815" font-size="15" fill="#1F2937">address</text>
+<text x="525" y="815" font-size="15" fill="#1F2937">String?</text>
+<rect x="220" y="825" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="230" y="845" font-size="14" fill="#1F7A3F"></text>
+<text x="290" y="845" font-size="15" fill="#1F2937">severity</text>
+<text x="525" y="845" font-size="15" fill="#1F2937">ReportSeverity</text>
+<rect x="220" y="855" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="230" y="875" font-size="14" fill="#1F7A3F"></text>
+<text x="290" y="875" font-size="15" fill="#1F2937">resourceName</text>
+<text x="525" y="875" font-size="15" fill="#1F2937">String?</text>
+<rect x="220" y="885" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="230" y="905" font-size="14" fill="#1F7A3F"></text>
+<text x="290" y="905" font-size="15" fill="#1F2937">quantityNeeded</text>
+<text x="525" y="905" font-size="15" fill="#1F2937">Int?</text>
+<rect x="220" y="915" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="230" y="935" font-size="14" fill="#1F7A3F">FK</text>
+<text x="290" y="935" font-size="15" fill="#1F2937">volunteerId</text>
+<text x="525" y="935" font-size="15" fill="#1F2937">String</text>
+<rect x="220" y="945" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="230" y="965" font-size="14" fill="#1F7A3F"></text>
+<text x="290" y="965" font-size="15" fill="#1F2937">createdAt</text>
+<text x="525" y="965" font-size="15" fill="#1F2937">DateTime</text>
+<rect x="220" y="975" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="230" y="995" font-size="14" fill="#1F7A3F"></text>
+<text x="290" y="995" font-size="15" fill="#1F2937">updatedAt</text>
+<text x="525" y="995" font-size="15" fill="#1F2937">DateTime</text>
+<rect x="1090" y="745" width="540" height="470" fill="#FBFCFE" stroke="#1F7A3F" stroke-width="2"/>
+<rect x="1090" y="745" width="540" height="50" fill="#EAF5EE" stroke="#1F7A3F" stroke-width="2"/>
+<text x="1360" y="778" font-size="22" font-weight="700" text-anchor="middle" fill="#1F7A3F">OrganizationVolunteerRequest</text>
+<rect x="1090" y="795" width="540" height="30" fill="#F5F7FA" stroke="#1F7A3F" stroke-width="1"/>
+<text x="1100" y="815" font-size="14" font-weight="700" fill="#1F7A3F">KEY</text>
+<text x="1160" y="815" font-size="14" font-weight="700" fill="#1F7A3F">FIELD</text>
+<text x="1395" y="815" font-size="14" font-weight="700" fill="#1F7A3F">TYPE</text>
+<rect x="1090" y="825" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1100" y="845" font-size="14" fill="#1F7A3F">PK</text>
+<text x="1160" y="845" font-size="15" fill="#1F2937">id</text>
+<text x="1395" y="845" font-size="15" fill="#1F2937">String</text>
+<rect x="1090" y="855" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1100" y="875" font-size="14" fill="#1F7A3F"></text>
+<text x="1160" y="875" font-size="15" fill="#1F2937">title</text>
+<text x="1395" y="875" font-size="15" fill="#1F2937">String</text>
+<rect x="1090" y="885" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1100" y="905" font-size="14" fill="#1F7A3F"></text>
+<text x="1160" y="905" font-size="15" fill="#1F2937">description</text>
+<text x="1395" y="905" font-size="15" fill="#1F2937">String</text>
+<rect x="1090" y="915" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1100" y="935" font-size="14" fill="#1F7A3F"></text>
+<text x="1160" y="935" font-size="15" fill="#1F2937">requiredSkills</text>
+<text x="1395" y="935" font-size="15" fill="#1F2937">String[]</text>
+<rect x="1090" y="945" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1100" y="965" font-size="14" fill="#1F7A3F"></text>
+<text x="1160" y="965" font-size="15" fill="#1F2937">location</text>
+<text x="1395" y="965" font-size="15" fill="#1F2937">String</text>
+<rect x="1090" y="975" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1100" y="995" font-size="14" fill="#1F7A3F"></text>
+<text x="1160" y="995" font-size="15" fill="#1F2937">neededVolunteers</text>
+<text x="1395" y="995" font-size="15" fill="#1F2937">Int</text>
+<rect x="1090" y="1005" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1100" y="1025" font-size="14" fill="#1F7A3F"></text>
+<text x="1160" y="1025" font-size="15" fill="#1F2937">disasterName</text>
+<text x="1395" y="1025" font-size="15" fill="#1F2937">String?</text>
+<rect x="1090" y="1035" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1100" y="1055" font-size="14" fill="#1F7A3F"></text>
+<text x="1160" y="1055" font-size="15" fill="#1F2937">status</text>
+<text x="1395" y="1055" font-size="15" fill="#1F2937">OrganizationRequestStatus</text>
+<rect x="1090" y="1065" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1100" y="1085" font-size="14" fill="#1F7A3F"></text>
+<text x="1160" y="1085" font-size="15" fill="#1F2937">isDeleted</text>
+<text x="1395" y="1085" font-size="15" fill="#1F2937">Boolean</text>
+<rect x="1090" y="1095" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1100" y="1115" font-size="14" fill="#1F7A3F"></text>
+<text x="1160" y="1115" font-size="15" fill="#1F2937">deletedAt</text>
+<text x="1395" y="1115" font-size="15" fill="#1F2937">DateTime?</text>
+<rect x="1090" y="1125" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1100" y="1145" font-size="14" fill="#1F7A3F">FK</text>
+<text x="1160" y="1145" font-size="15" fill="#1F2937">organizationUserId</text>
+<text x="1395" y="1145" font-size="15" fill="#1F2937">String</text>
+<rect x="1090" y="1155" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1100" y="1175" font-size="14" fill="#1F7A3F"></text>
+<text x="1160" y="1175" font-size="15" fill="#1F2937">createdAt</text>
+<text x="1395" y="1175" font-size="15" fill="#1F2937">DateTime</text>
+<rect x="1090" y="1185" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="1100" y="1205" font-size="14" fill="#1F7A3F"></text>
+<text x="1160" y="1205" font-size="15" fill="#1F2937">updatedAt</text>
+<text x="1395" y="1205" font-size="15" fill="#1F2937">DateTime</text>
+<rect x="220" y="1485" width="540" height="260" fill="#FBFCFE" stroke="#1F7A3F" stroke-width="2"/>
+<rect x="220" y="1485" width="540" height="50" fill="#EAF5EE" stroke="#1F7A3F" stroke-width="2"/>
+<text x="490" y="1518" font-size="22" font-weight="700" text-anchor="middle" fill="#1F7A3F">VolunteerOrganizationJoin</text>
+<rect x="220" y="1535" width="540" height="30" fill="#F5F7FA" stroke="#1F7A3F" stroke-width="1"/>
+<text x="230" y="1555" font-size="14" font-weight="700" fill="#1F7A3F">KEY</text>
+<text x="290" y="1555" font-size="14" font-weight="700" fill="#1F7A3F">FIELD</text>
+<text x="525" y="1555" font-size="14" font-weight="700" fill="#1F7A3F">TYPE</text>
+<rect x="220" y="1565" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="230" y="1585" font-size="14" fill="#1F7A3F">PK</text>
+<text x="290" y="1585" font-size="15" fill="#1F2937">id</text>
+<text x="525" y="1585" font-size="15" fill="#1F2937">String</text>
+<rect x="220" y="1595" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="230" y="1615" font-size="14" fill="#1F7A3F"></text>
+<text x="290" y="1615" font-size="15" fill="#1F2937">status</text>
+<text x="525" y="1615" font-size="15" fill="#1F2937">GroupJoinStatus</text>
+<rect x="220" y="1625" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="230" y="1645" font-size="14" fill="#1F7A3F"></text>
+<text x="290" y="1645" font-size="15" fill="#1F2937">joinedAt</text>
+<text x="525" y="1645" font-size="15" fill="#1F2937">DateTime</text>
+<rect x="220" y="1655" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="230" y="1675" font-size="14" fill="#1F7A3F">FK</text>
+<text x="290" y="1675" font-size="15" fill="#1F2937">volunteerId</text>
+<text x="525" y="1675" font-size="15" fill="#1F2937">String</text>
+<rect x="220" y="1685" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="230" y="1705" font-size="14" fill="#1F7A3F">FK</text>
+<text x="290" y="1705" font-size="15" fill="#1F2937">organizationRequestId</text>
+<text x="525" y="1705" font-size="15" fill="#1F2937">String</text>
+<rect x="220" y="1715" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="230" y="1735" font-size="14" fill="#1F7A3F"></text>
+<text x="290" y="1735" font-size="15" fill="#1F2937">updatedAt</text>
+<text x="525" y="1735" font-size="15" fill="#1F2937">DateTime</text>
+<rect x="220" y="1085" width="540" height="320" fill="#FBFCFE" stroke="#1F7A3F" stroke-width="2"/>
+<rect x="220" y="1085" width="540" height="50" fill="#EAF5EE" stroke="#1F7A3F" stroke-width="2"/>
+<text x="490" y="1118" font-size="22" font-weight="700" text-anchor="middle" fill="#1F7A3F">VolunteerGroupJoin</text>
+<rect x="220" y="1135" width="540" height="30" fill="#F5F7FA" stroke="#1F7A3F" stroke-width="1"/>
+<text x="230" y="1155" font-size="14" font-weight="700" fill="#1F7A3F">KEY</text>
+<text x="290" y="1155" font-size="14" font-weight="700" fill="#1F7A3F">FIELD</text>
+<text x="525" y="1155" font-size="14" font-weight="700" fill="#1F7A3F">TYPE</text>
+<rect x="220" y="1165" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="230" y="1185" font-size="14" fill="#1F7A3F">PK</text>
+<text x="290" y="1185" font-size="15" fill="#1F2937">id</text>
+<text x="525" y="1185" font-size="15" fill="#1F2937">String</text>
+<rect x="220" y="1195" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="230" y="1215" font-size="14" fill="#1F7A3F"></text>
+<text x="290" y="1215" font-size="15" fill="#1F2937">targetType</text>
+<text x="525" y="1215" font-size="15" fill="#1F2937">GroupTargetType</text>
+<rect x="220" y="1225" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="230" y="1245" font-size="14" fill="#1F7A3F"></text>
+<text x="290" y="1245" font-size="15" fill="#1F2937">targetId</text>
+<text x="525" y="1245" font-size="15" fill="#1F2937">String</text>
+<rect x="220" y="1255" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="230" y="1275" font-size="14" fill="#1F7A3F"></text>
+<text x="290" y="1275" font-size="15" fill="#1F2937">whyJoin</text>
+<text x="525" y="1275" font-size="15" fill="#1F2937">String</text>
+<rect x="220" y="1285" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="230" y="1305" font-size="14" fill="#1F7A3F"></text>
+<text x="290" y="1305" font-size="15" fill="#1F2937">status</text>
+<text x="525" y="1305" font-size="15" fill="#1F2937">GroupJoinStatus</text>
+<rect x="220" y="1315" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="230" y="1335" font-size="14" fill="#1F7A3F">FK</text>
+<text x="290" y="1335" font-size="15" fill="#1F2937">volunteerId</text>
+<text x="525" y="1335" font-size="15" fill="#1F2937">String</text>
+<rect x="220" y="1345" width="540" height="30" fill="#FFFFFF" stroke="#E6E9EF" stroke-width="1"/>
+<text x="230" y="1365" font-size="14" fill="#1F7A3F"></text>
+<text x="290" y="1365" font-size="15" fill="#1F2937">createdAt</text>
+<text x="525" y="1365" font-size="15" fill="#1F2937">DateTime</text>
+<rect x="220" y="1375" width="540" height="30" fill="#F7F9FC" stroke="#E6E9EF" stroke-width="1"/>
+<text x="230" y="1395" font-size="14" fill="#1F7A3F"></text>
+<text x="290" y="1395" font-size="15" fill="#1F2937">updatedAt</text>
+<text x="525" y="1395" font-size="15" fill="#1F2937">DateTime</text>
+<polyline points="5110,1110 5130,1110 5130,260 5110,260" fill="none" stroke="#7B4DB5" stroke-width="2.2" stroke-linejoin="round"/>
+<polyline points="5110,1600 5190,1600 5190,290 5110,290" fill="none" stroke="#7B4DB5" stroke-width="2.2" stroke-linejoin="round"/>
+<polyline points="5110,1940 5220,1940 5220,320 5110,320" fill="none" stroke="#7B4DB5" stroke-width="2.2" stroke-linejoin="round"/>
+<polyline points="5110,1970 5160,1970 5160,870 5110,870" fill="none" stroke="#7B4DB5" stroke-width="2.2" stroke-linejoin="round"/>
+<polyline points="5110,2460 5130,2460 5130,1420 5110,1420" fill="none" stroke="#7B4DB5" stroke-width="2.2" stroke-linejoin="round"/>
+<polyline points="2500,1410 2580,1410 2580,260 2500,260" fill="none" stroke="#2F5FB3" stroke-width="2.2" stroke-linejoin="round"/>
+<polyline points="2830,1840 2670,1840 2670,290 2500,290" fill="none" stroke="#0E8A7A" stroke-width="2.2" stroke-linejoin="round"/>
+<polyline points="3700,320 3420,320 3420,1600 3370,1600" fill="none" stroke="#0E8A7A" stroke-width="2.2" stroke-linejoin="round"/>
+<polyline points="3700,660 3390,660 3390,1630 3370,1630" fill="none" stroke="#0E8A7A" stroke-width="2.2" stroke-linejoin="round"/>
+<polyline points="3700,1000 3680,1000 3680,1660 3370,1660" fill="none" stroke="#0E8A7A" stroke-width="2.2" stroke-linejoin="round"/>
+<polyline points="2830,650 2810,650 2810,320 2500,320" fill="none" stroke="#C2493A" stroke-width="2.2" stroke-linejoin="round"/>
+<polyline points="1630,1720 1910,1720 1910,260 1960,260" fill="none" stroke="#C46A12" stroke-width="2.2" stroke-linejoin="round"/>
+<polyline points="2830,1320 2520,1320 2520,350 2500,350" fill="none" stroke="#C2493A" stroke-width="2.2" stroke-linejoin="round"/>
+<polyline points="2830,1350 2550,1350 2550,380 2500,380" fill="none" stroke="#C2493A" stroke-width="2.2" stroke-linejoin="round"/>
+<polyline points="1960,1810 1650,1810 1650,1970 1630,1970" fill="none" stroke="#C46A12" stroke-width="2.2" stroke-linejoin="round"/>
+<polyline points="1960,1840 1940,1840 1940,1390 1630,1390" fill="none" stroke="#C46A12" stroke-width="2.2" stroke-linejoin="round"/>
+<polyline points="1630,590 1650,590 1650,290 1960,290" fill="none" stroke="#1F7A3F" stroke-width="2.2" stroke-linejoin="round"/>
+<polyline points="760,380 1070,380 1070,260 1090,260" fill="none" stroke="#1F7A3F" stroke-width="2.2" stroke-linejoin="round"/>
+<polyline points="760,930 780,930 780,290 1090,290" fill="none" stroke="#1F7A3F" stroke-width="2.2" stroke-linejoin="round"/>
+<polyline points="1630,1140 1940,1140 1940,320 1960,320" fill="none" stroke="#1F7A3F" stroke-width="2.2" stroke-linejoin="round"/>
+<polyline points="760,1670 1010,1670 1010,320 1090,320" fill="none" stroke="#1F7A3F" stroke-width="2.2" stroke-linejoin="round"/>
+<polyline points="760,1700 1070,1700 1070,840 1090,840" fill="none" stroke="#1F7A3F" stroke-width="2.2" stroke-linejoin="round"/>
+<polyline points="760,1330 1040,1330 1040,350 1090,350" fill="none" stroke="#1F7A3F" stroke-width="2.2" stroke-linejoin="round"/>
+<polyline points="3700,350 3680,350 3680,140 2610,140 2610,410 2500,410" fill="none" stroke="#0E8A7A" stroke-width="2.2" stroke-linejoin="round"/>
+<polyline points="3700,690 3680,690 3680,750 2610,750 2610,440 2500,440" fill="none" stroke="#0E8A7A" stroke-width="2.2" stroke-linejoin="round"/>
+<polyline points="3700,1030 3450,1030 3450,780 2640,780 2640,470 2500,470" fill="none" stroke="#0E8A7A" stroke-width="2.2" stroke-linejoin="round"/>
+<polyline points="4570,620 4550,620 4550,110 2700,110 2700,500 2500,500" fill="none" stroke="#7B4DB5" stroke-width="2.2" stroke-linejoin="round"/>
+<polyline points="4570,1140 4550,1140 4550,1450 2700,1450 2700,530 2500,530" fill="none" stroke="#7B4DB5" stroke-width="2.2" stroke-linejoin="round"/>
+<polyline points="4570,1170 3450,1170 3450,1480 2730,1480 2730,560 2500,560" fill="none" stroke="#7B4DB5" stroke-width="2.2" stroke-linejoin="round"/>
+<polyline points="4570,1630 4550,1630 4550,1940 2760,1940 2760,590 2500,590" fill="none" stroke="#7B4DB5" stroke-width="2.2" stroke-linejoin="round"/>
+<polyline points="760,410 1070,410 1070,720 1880,720 1880,1050 2810,1050 2810,900 2830,900" fill="none" stroke="#1F7A3F" stroke-width="2.2" stroke-linejoin="round"/>
+<text x="5118" y="1102" font-size="17" font-weight="700" fill="#7B4DB5">N</text>
+<text x="5118" y="252" font-size="17" font-weight="700" fill="#7B4DB5">1</text>
+<text x="5118" y="1592" font-size="17" font-weight="700" fill="#7B4DB5">N</text>
+<text x="5118" y="282" font-size="17" font-weight="700" fill="#7B4DB5">1</text>
+<text x="5118" y="1932" font-size="17" font-weight="700" fill="#7B4DB5">N</text>
+<text x="5118" y="312" font-size="17" font-weight="700" fill="#7B4DB5">1</text>
+<text x="5118" y="1962" font-size="17" font-weight="700" fill="#7B4DB5">N</text>
+<text x="5118" y="862" font-size="17" font-weight="700" fill="#7B4DB5">1</text>
+<text x="5118" y="2452" font-size="17" font-weight="700" fill="#7B4DB5">N</text>
+<text x="5118" y="1412" font-size="17" font-weight="700" fill="#7B4DB5">1</text>
+<text x="2508" y="1402" font-size="17" font-weight="700" fill="#2F5FB3">N</text>
+<text x="2508" y="252" font-size="17" font-weight="700" fill="#2F5FB3">1</text>
+<text x="2810" y="1832" font-size="17" font-weight="700" fill="#0E8A7A">N</text>
+<text x="2508" y="282" font-size="17" font-weight="700" fill="#0E8A7A">1</text>
+<text x="3680" y="312" font-size="17" font-weight="700" fill="#0E8A7A">N</text>
+<text x="3378" y="1592" font-size="17" font-weight="700" fill="#0E8A7A">1</text>
+<text x="3680" y="652" font-size="17" font-weight="700" fill="#0E8A7A">N</text>
+<text x="3378" y="1622" font-size="17" font-weight="700" fill="#0E8A7A">1</text>
+<text x="3680" y="992" font-size="17" font-weight="700" fill="#0E8A7A">N</text>
+<text x="3378" y="1652" font-size="17" font-weight="700" fill="#0E8A7A">1</text>
+<text x="2810" y="642" font-size="17" font-weight="700" fill="#C2493A">N</text>
+<text x="2508" y="312" font-size="17" font-weight="700" fill="#C2493A">1</text>
+<text x="1638" y="1712" font-size="17" font-weight="700" fill="#C46A12">1</text>
+<text x="1940" y="252" font-size="17" font-weight="700" fill="#C46A12">1</text>
+<text x="2810" y="1312" font-size="17" font-weight="700" fill="#C2493A">N</text>
+<text x="2508" y="342" font-size="17" font-weight="700" fill="#C2493A">1</text>
+<text x="2810" y="1342" font-size="17" font-weight="700" fill="#C2493A">N</text>
+<text x="2508" y="372" font-size="17" font-weight="700" fill="#C2493A">1</text>
+<text x="1940" y="1802" font-size="17" font-weight="700" fill="#C46A12">N</text>
+<text x="1638" y="1962" font-size="17" font-weight="700" fill="#C46A12">1</text>
+<text x="1940" y="1832" font-size="17" font-weight="700" fill="#C46A12">N</text>
+<text x="1638" y="1382" font-size="17" font-weight="700" fill="#C46A12">1</text>
+<text x="1638" y="582" font-size="17" font-weight="700" fill="#1F7A3F">1</text>
+<text x="1940" y="282" font-size="17" font-weight="700" fill="#1F7A3F">1</text>
+<text x="768" y="372" font-size="17" font-weight="700" fill="#1F7A3F">N</text>
+<text x="1070" y="252" font-size="17" font-weight="700" fill="#1F7A3F">1</text>
+<text x="768" y="922" font-size="17" font-weight="700" fill="#1F7A3F">N</text>
+<text x="1070" y="282" font-size="17" font-weight="700" fill="#1F7A3F">1</text>
+<text x="1638" y="1132" font-size="17" font-weight="700" fill="#1F7A3F">N</text>
+<text x="1940" y="312" font-size="17" font-weight="700" fill="#1F7A3F">1</text>
+<text x="768" y="1662" font-size="17" font-weight="700" fill="#1F7A3F">N</text>
+<text x="1070" y="312" font-size="17" font-weight="700" fill="#1F7A3F">1</text>
+<text x="768" y="1692" font-size="17" font-weight="700" fill="#1F7A3F">N</text>
+<text x="1070" y="832" font-size="17" font-weight="700" fill="#1F7A3F">1</text>
+<text x="768" y="1322" font-size="17" font-weight="700" fill="#1F7A3F">N</text>
+<text x="1070" y="342" font-size="17" font-weight="700" fill="#1F7A3F">1</text>
+<text x="3680" y="342" font-size="17" font-weight="700" fill="#0E8A7A">N</text>
+<text x="2508" y="402" font-size="17" font-weight="700" fill="#0E8A7A">1</text>
+<text x="3680" y="682" font-size="17" font-weight="700" fill="#0E8A7A">N</text>
+<text x="2508" y="432" font-size="17" font-weight="700" fill="#0E8A7A">1</text>
+<text x="3680" y="1022" font-size="17" font-weight="700" fill="#0E8A7A">N</text>
+<text x="2508" y="462" font-size="17" font-weight="700" fill="#0E8A7A">1</text>
+<text x="4550" y="612" font-size="17" font-weight="700" fill="#7B4DB5">N</text>
+<text x="2508" y="492" font-size="17" font-weight="700" fill="#7B4DB5">1</text>
+<text x="4550" y="1132" font-size="17" font-weight="700" fill="#7B4DB5">N</text>
+<text x="2508" y="522" font-size="17" font-weight="700" fill="#7B4DB5">1</text>
+<text x="4550" y="1162" font-size="17" font-weight="700" fill="#7B4DB5">N</text>
+<text x="2508" y="552" font-size="17" font-weight="700" fill="#7B4DB5">1</text>
+<text x="4550" y="1622" font-size="17" font-weight="700" fill="#7B4DB5">N</text>
+<text x="2508" y="582" font-size="17" font-weight="700" fill="#7B4DB5">1</text>
+<text x="768" y="402" font-size="17" font-weight="700" fill="#1F7A3F">N</text>
+<text x="2810" y="892" font-size="17" font-weight="700" fill="#1F7A3F">1</text>
 </svg>
