@@ -1,5 +1,6 @@
 import cron from "node-cron";
 import { PaymentStatus } from "../../generated/prisma/enums";
+import { trashService } from "../module/trash/trash.service";
 import { logger } from "./logger";
 import { prisma } from "./prisma";
 
@@ -26,13 +27,32 @@ const cancelStalePendingPayments = () => {
 				);
 			}
 		} catch (error) {
-			logger.error({ err: error }, "Cron: Failed to cancel stale pending payments");
+			logger.error(
+				{ err: error },
+				"Cron: Failed to cancel stale pending payments",
+			);
+		}
+	});
+};
+
+// every day at 03:00: permanently remove trash items older than 30 days
+const cleanupExpiredTrash = () => {
+	cron.schedule("0 3 * * *", async () => {
+		try {
+			const { removed } = await trashService.cleanupExpiredTrashFromDB();
+
+			if (removed > 0) {
+				logger.info({ count: removed }, "Cron: Purged expired trash items");
+			}
+		} catch (error) {
+			logger.error({ err: error }, "Cron: Failed to purge expired trash items");
 		}
 	});
 };
 
 export const startCronJobs = () => {
 	cancelStalePendingPayments();
+	cleanupExpiredTrash();
 
 	logger.info("Cron jobs scheduled");
 };
