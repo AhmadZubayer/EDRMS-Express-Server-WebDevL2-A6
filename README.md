@@ -6,8 +6,8 @@ EDRMS (Emergency Disaster Response & Management System) is a REST API that conne
 
 ## 2. Live Link
 
-- Live API: deployed on Vercel from the `Deployment` branch (add the production URL here after importing the repository into Vercel)
-- API documentation: `/docs` on the deployed URL, or <http://localhost:5000/docs> locally
+- [Live API](https://edrms-express-server-ahmadzubayer.vercel.app/)
+- [Live API documentation](https://edrms-express-server-ahmadzubayer.vercel.app/docs/) (local: <http://localhost:5000/docs>)
 - Repository: [github.com/AhmadZubayer/EDRMS-Express-Server-WebDevL2-A6](https://github.com/AhmadZubayer/EDRMS-Express-Server-WebDevL2-A6)
 
 ## 3. Advanced Features
