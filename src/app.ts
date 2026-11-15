@@ -38,7 +38,7 @@ const app: Application = express();
 
 app.use(
 	cors({
-		origin: config.frontend_url,
+		origin: (config.frontend_url || "").split(",").map((o) => o.trim()),
 		credentials: true,
 	}),
 );
