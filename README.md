@@ -490,3 +490,7 @@ Completed by Ahmad Zubayer during the Next Level Development course at Programmi
 ## 12. Use of AI
 
 Claude Code was used to convert the project to Express, brainstorm the module structure, write boilerplate, fix errors and draft documentation.
+
+## 13. Deployment (Vercel)
+
+The `Deployment` branch adds `api/index.js` (re-exports the bundled Express app from `dist/app.js`), `public/.gitkeep` (static output folder), and `vercel.json` (`npm run build`, function packaging with the Swagger doc files and EJS templates, rewrite of every path to the function). Import the repository in Vercel, pick the `Deployment` branch as the production branch, keep the Other framework preset and add the same variables as `.env.example` (`NODE_ENV=production`, `DATABASE_URL`, `SERVER_URL`, `FRONTEND_URL`, JWT, Redis, SMTP, Cloudinary, Stripe, bKash and Google values). Apply migrations once with `npm run db:deploy` and seed with `npm run db:seed` against the production database.
