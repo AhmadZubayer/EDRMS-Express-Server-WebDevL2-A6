@@ -30,6 +30,9 @@ authRoutes.post("/refresh-token", authController.refreshToken);
 
 authRoutes.post("/logout", authController.logoutUser);
 
+authRoutes.get("/google", authController.googleRedirect);
+authRoutes.get("/google/callback", authController.googleCallback);
+
 authRoutes.post(
 	"/google",
 	validateRequest(authValidation.googleLoginSchema),

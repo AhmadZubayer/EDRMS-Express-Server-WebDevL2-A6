@@ -1,5 +1,7 @@
 import type { Request, Response } from "express";
 import httpStatus from "http-status";
+import config from "../../config";
+import { googleRedirectClient } from "../../lib/googleAuth";
 import { AppError } from "../../utils/AppError";
 import { clearAuthCookies, setAuthCookies } from "../../utils/authCookies";
 import { catchAsync } from "../../utils/catchAsync";
@@ -121,6 +123,39 @@ const googleLogin = catchAsync(async (req: Request, res: Response) => {
 	});
 });
 
+const frontendBase = () => (config.frontend_url || "").split(",")[0].trim();
+
+const googleRedirect = (_req: Request, res: Response) => {
+	const url = googleRedirectClient().generateAuthUrl({
+		scope: ["openid", "email", "profile"],
+		prompt: "select_account",
+	});
+	res.redirect(url);
+};
+
+const googleCallback = async (req: Request, res: Response) => {
+	const code = typeof req.query.code === "string" ? req.query.code : "";
+	if (!code) {
+		return res.redirect(`${frontendBase()}/auth/callback?error=google_cancelled`);
+	}
+	try {
+		const { tokens } = await googleRedirectClient().getToken(code);
+		if (!tokens.id_token) throw new Error("Missing Google ID token");
+		const { accessToken, refreshToken } = await authService.googleLogin({
+			idToken: tokens.id_token,
+		});
+		setAuthCookies(res, accessToken, refreshToken);
+		return res.redirect(
+			`${frontendBase()}/auth/callback?access_token=${encodeURIComponent(accessToken)}`,
+		);
+	} catch (error) {
+		const message = error instanceof Error ? error.message : "google_failed";
+		return res.redirect(
+			`${frontendBase()}/auth/callback?error=${encodeURIComponent(message)}`,
+		);
+	}
+};
+
 const forgotPassword = catchAsync(async (req: Request, res: Response) => {
 	const payload = req.body;
 
@@ -183,6 +218,8 @@ export const authController = {
 	getMe,
 	refreshToken,
 	googleLogin,
+	googleRedirect,
+	googleCallback,
 	forgotPassword,
 	resetPassword,
 	changePassword,
