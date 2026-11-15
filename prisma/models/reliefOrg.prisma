@@ -1,0 +1,23 @@
+model ReliefOrg {
+  id                 String   @id @default(uuid())
+  organizationName   String
+  registrationNumber String   @unique
+  address            String
+  contactEmail       String?
+  contactPhone       String?
+  website            String?
+  description        String?  @db.Text
+  organizationType   String?
+  verificationDocs   String[]
+  adminVerified      Boolean  @default(false)
+
+  userId String @unique
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  shelters Shelter[]
+
+  @@map("relief_orgs")
+}

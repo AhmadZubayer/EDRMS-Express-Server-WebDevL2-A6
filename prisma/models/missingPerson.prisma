@@ -1,0 +1,25 @@
+model MissingPerson {
+  id               String              @id @default(uuid())
+  fullName         String
+  age              Int
+  gender           String
+  lastSeenLocation String
+  lastSeenDate     DateTime
+  photoUrl         String?
+  photoPublicId    String?
+  description      String              @db.Text
+  contactPhone     String
+  status           MissingPersonStatus @default(MISSING)
+  isDeleted        Boolean             @default(false)
+  deletedAt        DateTime?
+
+  reporterId String
+  reporter   User   @relation(fields: [reporterId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([reporterId])
+  @@index([status])
+  @@map("missing_persons")
+}

@@ -1,0 +1,50 @@
+model User {
+  id                 String       @id @default(uuid())
+  name               String
+  email              String       @unique
+  password           String?
+  googleId           String?      @unique
+  authProvider       AuthProvider @default(CREDENTIAL)
+  emailVerified      Boolean      @default(false)
+  role               UserRole     @default(USER)
+  status             UserStatus   @default(ACTIVE)
+  needPasswordChange Boolean      @default(false)
+  imageUrl           String       @default("")
+  imagePublicId      String       @default("")
+
+  // profile
+  phone              String?  @unique
+  house              String?
+  city               String?
+  district           String?
+  country            String?  @default("Bangladesh")
+  gpsLat             Decimal? @db.Decimal(10, 7)
+  gpsLng             Decimal? @db.Decimal(10, 7)
+  isSafe             Boolean?
+  emergencyMessage   String?  @db.Text
+  medicalInformation String?  @db.Text
+
+  isDeleted Boolean   @default(false)
+  deletedAt DateTime?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  volunteer            Volunteer?
+  reliefOrg            ReliefOrg?
+  missingPersons       MissingPerson[]
+  rescueRequests       RescueRequest[]                @relation("RescueRequester")
+  assignedRescues      RescueRequest[]                @relation("RescueAssignee")
+  communityPosts       CommunityPost[]
+  postComments         CommunityPostComment[]
+  postReactions        CommunityPostReaction[]
+  postReports          CommunityPostReport[]
+  campaigns            DonationCampaign[]
+  donationApplications DonationApplication[]          @relation("ApplicationApplicant")
+  reviewedApplications DonationApplication[]          @relation("ApplicationReviewer")
+  donations            Donation[]
+  organizationRequests OrganizationVolunteerRequest[]
+  trashItems           TrashItem[]
+
+  @@index([role])
+  @@map("users")
+}

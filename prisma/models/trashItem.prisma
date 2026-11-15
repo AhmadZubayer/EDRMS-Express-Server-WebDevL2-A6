@@ -1,0 +1,16 @@
+model TrashItem {
+  id        String        @id @default(uuid())
+  itemType  TrashItemType
+  itemId    String
+  itemTitle String
+  payload   Json?
+  deletedAt DateTime      @default(now())
+  expiresAt DateTime
+
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([expiresAt])
+  @@map("trash_items")
+}

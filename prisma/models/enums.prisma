@@ -1,0 +1,171 @@
+enum UserRole {
+  USER
+  VOLUNTEER
+  RELIEF_ORG
+  ADMIN
+  SUPER_ADMIN
+}
+
+enum UserStatus {
+  ACTIVE
+  BLOCKED
+  DELETED
+}
+
+enum AuthProvider {
+  GOOGLE
+  CREDENTIAL
+}
+
+enum PaymentProvider {
+  STRIPE
+  BKASH
+}
+
+enum PaymentStatus {
+  PENDING
+  COMPLETED
+  FAILED
+  CANCELLED
+  REFUND_PENDING
+  REFUND_FAILED
+  REFUNDED
+}
+
+// Payable status of a Donation: INITIATED = ready to be paid, PAID = money received.
+enum DonationStatus {
+  INITIATED
+  PAID
+  CANCELLED
+}
+
+enum DisasterType {
+  CYCLONE
+  FLOOD
+  FLASH_FLOOD
+  HEAVY_RAIN
+  DROUGHT
+  EARTHQUAKE
+  LANDSLIDE
+  WILDFIRE
+  TSUNAMI
+  HEATWAVE
+  COLD_WAVE
+  RIVER_EROSION
+  STORM_SURGE
+  TORNADO
+  AVALANCHE
+}
+
+enum MissingPersonStatus {
+  MISSING
+  FOUND
+  RESOLVED
+  CLOSED
+}
+
+enum RescueStatus {
+  PENDING
+  ACKNOWLEDGED
+  DISPATCHED
+  IN_PROGRESS
+  RESCUED
+  CANCELLED
+}
+
+enum UrgencyLevel {
+  LOW
+  MEDIUM
+  HIGH
+  CRITICAL
+}
+
+enum PostStatus {
+  POSTED
+  FLAGGED
+  HIDDEN
+  ARCHIVED
+  REMOVED
+}
+
+enum ReactionType {
+  LIKE
+  CARE
+  SAD
+  DISLIKE
+}
+
+enum CampaignStatus {
+  ACTIVE
+  COMPLETED
+  CLOSED
+}
+
+enum ApplicationStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}
+
+enum VolunteerVerificationStatus {
+  NOT_APPLIED
+  PENDING
+  VERIFIED
+  REJECTED
+}
+
+enum VolunteerTaskStatus {
+  ACCEPTED
+  REJECTED
+  IN_PROGRESS
+  COMPLETED
+}
+
+enum FieldReportType {
+  BLOCKED_ROUTE
+  DANGEROUS_ROUTE
+  RESOURCE_SHORTAGE
+}
+
+enum ReportSeverity {
+  LOW
+  MEDIUM
+  HIGH
+  CRITICAL
+}
+
+enum OrganizationRequestStatus {
+  OPEN
+  CLOSED
+}
+
+enum VolunteerSkill {
+  FIRST_AID
+  SEARCH_AND_RESCUE
+  FIRE_SAFETY
+  MEDICAL_ASSISTANCE
+  LOGISTICS_TRANSPORT
+  FLOOD_RESCUE
+  SHELTER_MANAGEMENT
+  FOOD_DISTRIBUTION
+  PSYCHOSOCIAL_SUPPORT
+  TELECOMMUNICATIONS
+  OTHER
+}
+
+enum GroupTargetType {
+  RESCUE_REQUEST
+  MISSING_PERSON
+}
+
+enum GroupJoinStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}
+
+enum TrashItemType {
+  MISSING_PERSON
+  RESCUE_REQUEST
+  COMMUNITY_POST
+}

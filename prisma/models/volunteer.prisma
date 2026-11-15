@@ -1,0 +1,128 @@
+model Volunteer {
+  id                 String                      @id @default(uuid())
+  skills             VolunteerSkill[]
+  whyJoin            String                      @db.Text
+  nidCardUrl         String?
+  nidCardPublicId    String?
+  available          Boolean                     @default(false)
+  verificationStatus VolunteerVerificationStatus @default(NOT_APPLIED)
+  currentLatitude    Decimal?                    @db.Decimal(10, 7)
+  currentLongitude   Decimal?                    @db.Decimal(10, 7)
+  onDuty             Boolean                     @default(false)
+  lastLocationUpdate DateTime?
+
+  userId String @unique
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  tasks             VolunteerTask[]
+  fieldReports      FieldReport[]
+  organizationJoins VolunteerOrganizationJoin[]
+  groupJoins        VolunteerGroupJoin[]
+
+  @@map("volunteers")
+}
+
+model VolunteerTask {
+  id           String              @id @default(uuid())
+  status       VolunteerTaskStatus
+  progressNote String?             @db.Text
+  completedAt  DateTime?
+
+  volunteerId String
+  volunteer   Volunteer @relation(fields: [volunteerId], references: [id], onDelete: Cascade)
+
+  rescueRequestId String
+  rescueRequest   RescueRequest @relation(fields: [rescueRequestId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([volunteerId, rescueRequestId])
+  @@index([rescueRequestId])
+  @@map("volunteer_tasks")
+}
+
+model FieldReport {
+  id             String          @id @default(uuid())
+  reportType     FieldReportType
+  description    String          @db.Text
+  latitude       Decimal         @db.Decimal(10, 7)
+  longitude      Decimal         @db.Decimal(10, 7)
+  address        String?
+  severity       ReportSeverity  @default(MEDIUM)
+  resourceName   String?
+  quantityNeeded Int?
+
+  volunteerId String
+  volunteer   Volunteer @relation(fields: [volunteerId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([volunteerId])
+  @@map("volunteer_field_reports")
+}
+
+model OrganizationVolunteerRequest {
+  id               String                    @id @default(uuid())
+  title            String
+  description      String                    @db.Text
+  requiredSkills   String[]
+  location         String
+  neededVolunteers Int                       @default(1)
+  disasterName     String?
+  status           OrganizationRequestStatus @default(OPEN)
+  isDeleted        Boolean                   @default(false)
+  deletedAt        DateTime?
+
+  organizationUserId String
+  organizationUser   User   @relation(fields: [organizationUserId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  joins VolunteerOrganizationJoin[]
+
+  @@index([organizationUserId])
+  @@map("organization_volunteer_requests")
+}
+
+model VolunteerOrganizationJoin {
+  id       String          @id @default(uuid())
+  status   GroupJoinStatus @default(PENDING)
+  joinedAt DateTime        @default(now())
+
+  volunteerId String
+  volunteer   Volunteer @relation(fields: [volunteerId], references: [id], onDelete: Cascade)
+
+  organizationRequestId String
+  organizationRequest   OrganizationVolunteerRequest @relation(fields: [organizationRequestId], references: [id], onDelete: Cascade)
+
+  updatedAt DateTime @updatedAt
+
+  @@unique([volunteerId, organizationRequestId])
+  @@index([organizationRequestId])
+  @@map("volunteer_organization_joins")
+}
+
+// Polymorphic join: targetId points to a RescueRequest or MissingPerson depending on targetType.
+model VolunteerGroupJoin {
+  id         String          @id @default(uuid())
+  targetType GroupTargetType
+  targetId   String
+  whyJoin    String          @db.Text
+  status     GroupJoinStatus @default(PENDING)
+
+  volunteerId String
+  volunteer   Volunteer @relation(fields: [volunteerId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([volunteerId])
+  @@index([targetType, targetId])
+  @@map("volunteer_group_joins")
+}

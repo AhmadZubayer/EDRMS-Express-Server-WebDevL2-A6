@@ -1,0 +1,101 @@
+model DonationCampaign {
+  id            String         @id @default(uuid())
+  title         String
+  description   String         @db.Text
+  targetAmount  Decimal        @default(0) @db.Decimal(12, 2)
+  raisedAmount  Decimal        @default(0) @db.Decimal(12, 2)
+  status        CampaignStatus @default(ACTIVE)
+  startDate     DateTime
+  endDate       DateTime
+  photoUrl      String?
+  photoPublicId String?
+  isDeleted     Boolean        @default(false)
+  deletedAt     DateTime?
+
+  createdByUserId String?
+  createdBy       User?   @relation(fields: [createdByUserId], references: [id], onDelete: SetNull)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  applications DonationApplication[]
+  donations    Donation[]
+  payouts      DonationPayout[]
+
+  @@index([createdByUserId])
+  @@index([status])
+  @@map("donation_campaigns")
+}
+
+model DonationApplication {
+  id               String            @id @default(uuid())
+  reason           String            @db.Text
+  payoutDetails    String            @db.Text // bKash / Nagad / bank account details
+  proofDocumentUrl String?
+  proofPublicId    String?
+  status           ApplicationStatus @default(PENDING)
+  approvedAmount   Decimal?          @db.Decimal(12, 2)
+  reviewedAt       DateTime?
+
+  campaignId String
+  campaign   DonationCampaign @relation(fields: [campaignId], references: [id], onDelete: Cascade)
+
+  applicantId String
+  applicant   User   @relation("ApplicationApplicant", fields: [applicantId], references: [id], onDelete: Cascade)
+
+  reviewedByUserId String?
+  reviewedBy       User?   @relation("ApplicationReviewer", fields: [reviewedByUserId], references: [id], onDelete: SetNull)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  payouts DonationPayout[]
+
+  @@index([campaignId])
+  @@index([applicantId])
+  @@index([reviewedByUserId])
+  @@map("donation_applications")
+}
+
+// A donation made to a campaign. It is the payable record for the payment module.
+model Donation {
+  id          String         @id @default(uuid())
+  amount      Decimal        @db.Decimal(12, 2)
+  status      DonationStatus @default(INITIATED)
+  isAnonymous Boolean        @default(false)
+  donorName   String?
+  donorEmail  String?
+
+  campaignId String
+  campaign   DonationCampaign @relation(fields: [campaignId], references: [id], onDelete: Restrict)
+
+  userId String?
+  user   User?   @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  payments Payment[]
+
+  @@index([campaignId])
+  @@index([userId])
+  @@map("donations")
+}
+
+// Money granted to an approved application (the "receive" side of a campaign).
+model DonationPayout {
+  id     String  @id @default(uuid())
+  amount Decimal @db.Decimal(12, 2)
+
+  campaignId String
+  campaign   DonationCampaign @relation(fields: [campaignId], references: [id], onDelete: Restrict)
+
+  applicationId String
+  application   DonationApplication @relation(fields: [applicationId], references: [id], onDelete: Restrict)
+
+  createdAt DateTime @default(now())
+
+  @@index([campaignId])
+  @@index([applicationId])
+  @@map("donation_payouts")
+}

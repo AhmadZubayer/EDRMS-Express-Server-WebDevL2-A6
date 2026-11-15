@@ -1,0 +1,32 @@
+model RescueRequest {
+  id            String       @id @default(uuid())
+  latitude      Decimal      @db.Decimal(10, 7)
+  longitude     Decimal      @db.Decimal(10, 7)
+  address       String?
+  peopleCount   Int          @default(1)
+  urgencyLevel  UrgencyLevel @default(HIGH)
+  photoUrl      String?
+  photoPublicId String?
+  description   String       @db.Text
+  contactPhone  String
+  medicalNotes  String?      @db.Text
+  status        RescueStatus @default(PENDING)
+  isDeleted     Boolean      @default(false)
+  deletedAt     DateTime?
+
+  userId String
+  user   User   @relation("RescueRequester", fields: [userId], references: [id], onDelete: Cascade)
+
+  assignedRescuerId String?
+  assignedRescuer   User?   @relation("RescueAssignee", fields: [assignedRescuerId], references: [id], onDelete: SetNull)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  volunteerTasks VolunteerTask[]
+
+  @@index([userId])
+  @@index([assignedRescuerId])
+  @@index([status])
+  @@map("rescue_requests")
+}

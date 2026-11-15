@@ -1,0 +1,16 @@
+model Disaster {
+  id               String       @id @default(uuid())
+  disasterName     String
+  impactedLocation String
+  impactTime       DateTime
+  type             DisasterType @default(FLOOD)
+  isVerified       Boolean      @default(false)
+  isDeleted        Boolean      @default(false)
+  deletedAt        DateTime?
+  createdAt        DateTime     @default(now())
+  updatedAt        DateTime     @updatedAt
+
+  shelters Shelter[]
+
+  @@map("disasters")
+}

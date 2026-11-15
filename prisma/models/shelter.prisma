@@ -1,0 +1,22 @@
+model Shelter {
+  id                 String    @id @default(uuid())
+  shelterName        String
+  shelterLocation    String
+  shelterCapacity    Int
+  currentPeopleCount Int       @default(0)
+  isDeleted          Boolean   @default(false)
+  deletedAt          DateTime?
+
+  disasterId String
+  disaster   Disaster @relation(fields: [disasterId], references: [id], onDelete: Cascade)
+
+  reliefOrgId String
+  reliefOrg   ReliefOrg @relation(fields: [reliefOrgId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([disasterId])
+  @@index([reliefOrgId])
+  @@map("shelters")
+}
