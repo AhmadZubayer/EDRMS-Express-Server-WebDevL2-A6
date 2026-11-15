@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "framework": null,
+  "buildCommand": "npm run build",
+  "outputDirectory": "public",
+  "functions": {
+    "api/index.js": {
+      "includeFiles": "{dist/**,src/app/module/**/*.docs.ts,src/app/templates/**,node_modules/swagger-ui-dist/**}"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/api"
+    }
+  ]
+}
