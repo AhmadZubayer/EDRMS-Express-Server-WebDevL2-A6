@@ -3,13 +3,22 @@ import path from "path";
 
 dotenv.config({ path: path.join(process.cwd(), ".env") });
 
+const resolveServerUrl = () => {
+	const url = process.env.SERVER_URL;
+	const vercelHost = process.env.VERCEL_PROJECT_PRODUCTION_URL || process.env.VERCEL_URL;
+	if (vercelHost && (!url || /localhost|127\.0\.0\.1/.test(url))) {
+		return `https://${vercelHost}`;
+	}
+	return url as string;
+};
+
 export default {
 	// core
 	node_env: process.env.NODE_ENV,
 	port: process.env.PORT,
 	app_name: process.env.APP_NAME || "API Server",
 	database_url: process.env.DATABASE_URL,
-	server_url: process.env.SERVER_URL!,
+	server_url: resolveServerUrl(),
 	frontend_url: process.env.FRONTEND_URL,
 
 	// auth
