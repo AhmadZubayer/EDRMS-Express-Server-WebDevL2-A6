@@ -1,5 +1,6 @@
 import type { Request, Response } from "express";
 import httpStatus from "http-status";
+import config from "../../../../config";
 import { AppError } from "../../../../utils/AppError";
 import { catchAsync } from "../../../../utils/catchAsync";
 import { stripeWebhook } from "./stripe.webhook";
@@ -21,18 +22,18 @@ const handleStripeWebhook = catchAsync(async (req: Request, res: Response) => {
 	});
 });
 
-const showSuccessReturn = (_req: Request, res: Response) => {
-	res
-		.status(httpStatus.OK)
-		.send(
-			"Payment submitted. We are confirming it with Stripe. Your donation will be marked as paid shortly.",
-		);
+const frontendBase = () => (config.frontend_url || "").split(",")[0].trim();
+
+const showSuccessReturn = (req: Request, res: Response) => {
+	const sessionId =
+		typeof req.query.session_id === "string" ? req.query.session_id : "";
+	res.redirect(
+		`${frontendBase()}/donations/payment/success?provider=stripe&session_id=${encodeURIComponent(sessionId)}`,
+	);
 };
 
 const showCancelReturn = (_req: Request, res: Response) => {
-	res
-		.status(httpStatus.OK)
-		.send("You left Stripe Checkout. No payment was confirmed on this page.");
+	res.redirect(`${frontendBase()}/donations/payment/cancel?provider=stripe`);
 };
 
 export const stripeController = {
