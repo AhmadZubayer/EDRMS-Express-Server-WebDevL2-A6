@@ -1,39 +1,44 @@
 # PROGRESS
 
-Tracking the NestJS → Express 5 + Prisma 7 migration of EDRMS.
+Tracking the migration of EDRMS to Express 5 + Prisma 7.
 
 | # | Task | Status |
 |---|------|--------|
-| 1 | Convert NestJS project to Express (skill template) and remove NestJS files | in progress |
-| 2 | Re-implement authentication (register + email OTP, login, refresh, forgot/reset/change password, Google ID-token login) | in progress |
-| 3 | Redis for OTP storage | scaffolded, verifying |
-| 4 | Cloudinary uploads (in-memory Multer) | scaffolded, verifying |
-| 5 | Biome formatter + linter | done (config in `biome.json`) |
-| 6 | Zod server-side validation (replaces class-validator) | in progress |
-| 7 | SuperAdmin role (creates admins, inherits all admin powers) + schema update | schema done, endpoints in progress |
-| 8 | Stripe + bKash payments (Strategy + Adapter) | in progress |
-| 9 | TypeORM → Prisma | done (schema + migration) |
-| 10 | Prisma Postgres cloud database | done (migration `init` applied) |
-| 11 | Git: 30+ pushes under the owner's account | in progress |
-| 12 | Push 15 Bangladeshi sample records through the endpoints | pending |
-| 13 | Vercel deployment branch (`Deployment`) | pending |
-| 14 | Swagger docs for every endpoint | in progress |
-| 15 | README + draw.io ER diagram | pending |
+| 1 | Convert the project to Express (skill template) and remove the old framework files | done |
+| 2 | Authentication: register with email OTP, verify, login, refresh, forgot/reset/change password, Google ID-token login | done |
+| 3 | Redis for OTP storage | done |
+| 4 | Cloudinary uploads (in-memory Multer) | done, verified with a live upload |
+| 5 | Biome formatter and linter | done |
+| 6 | Zod server-side validation on every route | done |
+| 7 | SuperAdmin role (creates admins, inherits every admin power) and schema update | done |
+| 8 | Stripe and bKash payments (Strategy + Adapter) | done, checkout creation verified for both |
+| 9 | Previous ORM replaced with Prisma | done |
+| 10 | Prisma Postgres cloud database | done, `init` migration applied |
+| 11 | Git: 30+ pushes under the owner's account | done (60+ commits) |
+| 12 | 15 Bangladeshi sample records per entity through the endpoints | done |
+| 13 | Vercel deployment branch `Deployment` | see git branches |
+| 14 | Swagger docs for every endpoint | done |
+| 15 | README and draw.io ER diagram | done |
 
-## Module status
+## Modules
 
 | Module | Mount | Status |
 |--------|-------|--------|
-| auth | `/api/auth` | scaffolded |
-| user | `/api/users` | pending |
-| admin (+ super admin) | `/api/admin` | pending |
-| disaster | `/api/disasters` | pending |
-| shelter | `/api/shelters` | pending |
-| reliefOrg | `/api/relief-orgs` | pending |
-| missingPerson | `/api/missing-persons` | pending |
-| rescueRequest | `/api/rescue-requests` | pending |
-| communityPost | `/api/community-posts` | pending |
-| donation + payment | `/api/donations`, `/api/payments` | pending |
-| volunteer | `/api/volunteers` | pending |
-| volunteerNetwork | `/api/volunteers` | pending |
-| trash | `/api/trash` | pending |
+| auth | `/api/auth` | done |
+| user | `/api/users` | done |
+| admin (+ super admin) | `/api/admin` | done |
+| disaster | `/api/disasters` | done |
+| shelter | `/api/shelters` | done |
+| reliefOrg | `/api/relief-orgs` | done |
+| missingPerson | `/api/missing-persons` | done |
+| rescueRequest | `/api/rescue-requests` | done |
+| communityPost | `/api/community-posts` | done |
+| donation + payment | `/api/donations`, `/api/payments` | done |
+| volunteer | `/api/volunteers` | done |
+| volunteerNetwork | `/api/volunteers` | done |
+| trash | `/api/trash` | done |
+
+## Notes
+
+- Free-tier database: only light smoke checks were run, no load testing.
+- Stripe webhook needs `STRIPE_WEBHOOK_SECRET` from `stripe listen`; bKash uses the sandbox credentials.
