@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Disaster Alert</title>
+    <style>
+      body { font-family: Arial, sans-serif; background: #f7f7f7; color: #333; }
+      .container { max-width: 500px; margin: 40px auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+      .alert { color: #b3261e; }
+      .footer { margin-top: 30px; font-size: 12px; color: #888; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="alert">Disaster Alert: <%= disasterName %></h2>
+      <p>Hello <%= name %>,</p>
+      <p>A new disaster alert has been issued on <%= appName %>.</p>
+      <ul>
+        <li><strong>Type:</strong> <%= type %></li>
+        <li><strong>Impacted location:</strong> <%= impactedLocation %></li>
+        <li><strong>Impact time:</strong> <%= impactTime %></li>
+      </ul>
+      <p>Please stay safe, follow official instructions and check on the people around you.</p>
+      <div class="footer">&copy; <%= appName %>. All rights reserved.</div>
+    </div>
+  </body>
+</html>
