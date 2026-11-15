@@ -273,6 +273,9 @@ const getAllPostsFromDB = async (query: IPostQuery, viewer?: IViewer) => {
 	if (query.authorId) {
 		andConditions.push({ authorId: query.authorId });
 	}
+	if (query.authorRole) {
+		andConditions.push({ author: { role: query.authorRole } });
+	}
 
 	const where: Prisma.CommunityPostWhereInput = { AND: andConditions };
 

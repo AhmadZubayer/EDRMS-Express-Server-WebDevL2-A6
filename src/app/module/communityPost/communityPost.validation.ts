@@ -1,5 +1,9 @@
 import { z } from "zod";
-import { PostStatus, ReactionType } from "../../../generated/prisma/enums";
+import {
+	PostStatus,
+	ReactionType,
+	UserRole,
+} from "../../../generated/prisma/enums";
 
 const postIdParamsSchema = z.object({
 	id: z.uuid("Invalid post id"),
@@ -19,6 +23,7 @@ const getAllPostsQuerySchema = z.object({
 		.default("bumpedAt"),
 	sortOrder: z.enum(["asc", "desc"]).default("desc"),
 	authorId: z.uuid().optional(),
+	authorRole: z.enum(UserRole).optional(),
 });
 
 const getCommentsQuerySchema = z.object({

@@ -539,13 +539,25 @@ const getOpenOrganizationRequestsFromDB = async (
 	});
 
 	const volunteerSkills = new Set<string>(volunteer?.skills ?? []);
+	const viewerJoins = {
+		joins: {
+			where: { volunteer: { userId } },
+			select: { status: true },
+			take: 1,
+		},
+	} as const;
 
 	const withSkillMatch = <
-		T extends { requiredSkills: string[]; _count: { joins: number } },
+		T extends {
+			requiredSkills: string[];
+			_count: { joins: number };
+			joins: { status: GroupJoinStatus }[];
+		},
 	>(
 		request: T,
 	) => ({
 		...toRequestWithJoinedCount(request),
+		applicationStatus: request.joins[0]?.status ?? null,
 		matchedSkills: request.requiredSkills.filter((skill) =>
 			volunteerSkills.has(skill),
 		).length,
@@ -565,6 +577,7 @@ const getOpenOrganizationRequestsFromDB = async (
 			},
 			include: {
 				...approvedJoinsCount,
+				...viewerJoins,
 				organizationUser: organizationUserSelect,
 			},
 			orderBy: {
@@ -592,6 +605,7 @@ const getOpenOrganizationRequestsFromDB = async (
 		},
 		include: {
 			...approvedJoinsCount,
+			...viewerJoins,
 			organizationUser: organizationUserSelect,
 		},
 		take: limit,

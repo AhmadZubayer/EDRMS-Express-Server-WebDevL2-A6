@@ -109,6 +109,7 @@ const getApplicationsQuerySchema = z.object({
 
 const getMyDonationsQuerySchema = z.object({
 	...paginationShape,
+	searchTerm: z.string().trim().optional(),
 	status: z.enum(DonationStatus).optional(),
 	sortBy: z.enum(["createdAt", "amount"]).optional(),
 });

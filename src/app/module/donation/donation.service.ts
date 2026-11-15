@@ -601,6 +601,25 @@ const getMyDonationsFromDB = async (
 	const where: DonationWhereInput = {
 		userId,
 		...(query.status && { status: query.status }),
+		...(query.searchTerm && {
+			OR: [
+				{
+					campaign: {
+						title: { contains: query.searchTerm, mode: "insensitive" },
+					},
+				},
+				{
+					payments: {
+						some: {
+							transactionId: {
+								contains: query.searchTerm,
+								mode: "insensitive",
+							},
+						},
+					},
+				},
+			],
+		}),
 	};
 
 	const [donations, total] = await Promise.all([

@@ -60,6 +60,7 @@ export interface IApplicationQuery extends IPagination {
 }
 
 export interface IMyDonationsQuery extends IPagination {
+	searchTerm?: string;
 	status?: DonationStatus;
 	sortBy?: "createdAt" | "amount";
 }

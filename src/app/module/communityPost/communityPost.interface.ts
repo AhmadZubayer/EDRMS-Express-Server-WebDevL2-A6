@@ -1,4 +1,8 @@
-import type { PostStatus, ReactionType } from "../../../generated/prisma/enums";
+import type {
+	PostStatus,
+	ReactionType,
+	UserRole,
+} from "../../../generated/prisma/enums";
 
 export interface ICreateCommunityPost {
 	title: string;
@@ -33,6 +37,7 @@ export interface IPostQuery {
 	sortBy?: "createdAt" | "updatedAt" | "bumpedAt" | "title";
 	sortOrder?: "asc" | "desc";
 	authorId?: string;
+	authorRole?: UserRole;
 }
 
 export interface ICommentQuery {
