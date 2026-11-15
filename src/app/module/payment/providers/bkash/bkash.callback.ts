@@ -10,7 +10,9 @@ import { AppError } from "../../../../utils/AppError";
 import { paymentService } from "../../payment.service";
 
 const getRedirectUrl = (status: "success" | "failed" | "cancelled") => {
-	return `${config.frontend_url}/payment/${status}`;
+	const base = (config.frontend_url || "").split(",")[0].trim();
+	const page = status === "success" ? "success" : "cancel";
+	return `${base}/donations/payment/${page}?provider=bkash&status=${status}`;
 };
 
 const handleCallback = async (query: Record<string, unknown>) => {
