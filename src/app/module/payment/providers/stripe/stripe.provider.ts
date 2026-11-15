@@ -3,7 +3,7 @@ import { Prisma } from "../../../../../generated/prisma/client";
 import config from "../../../../config";
 import { stripe } from "../../../../lib/stripe";
 import { AppError } from "../../../../utils/AppError";
-import {
+import type {
 	ICreateCheckoutPayload,
 	IPaymentProvider,
 	IRefundPayment,

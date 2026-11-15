@@ -2,7 +2,7 @@ import httpStatus from "http-status";
 import config from "../../../../config";
 import { bkashRequest } from "../../../../lib/bkash";
 import { AppError } from "../../../../utils/AppError";
-import {
+import type {
 	ICreateCheckoutPayload,
 	IPaymentProvider,
 	IRefundPayment,

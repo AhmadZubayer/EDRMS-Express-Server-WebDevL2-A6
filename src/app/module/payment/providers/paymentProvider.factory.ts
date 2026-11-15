@@ -1,7 +1,7 @@
 import httpStatus from "http-status";
 import { PaymentProvider } from "../../../../generated/prisma/enums";
 import { AppError } from "../../../utils/AppError";
-import { IPaymentProvider } from "../payment.interface";
+import type { IPaymentProvider } from "../payment.interface";
 import { bkashPaymentProvider } from "./bkash/bkash.provider";
 import { stripePaymentProvider } from "./stripe/stripe.provider";
 

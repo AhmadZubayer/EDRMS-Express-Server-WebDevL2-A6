@@ -36,7 +36,8 @@ export const globalErrorHandler = (
 				"An operation failed because it depends on one or more records that were required but not found.";
 		} else if (err.code === "P2034") {
 			statusCode = httpStatus.CONFLICT;
-			errorMessage = "Request conflicted with another request. Please try again";
+			errorMessage =
+				"Request conflicted with another request. Please try again";
 		}
 	} else if (err instanceof Prisma.PrismaClientInitializationError) {
 		if (err.errorCode === "P1000") {

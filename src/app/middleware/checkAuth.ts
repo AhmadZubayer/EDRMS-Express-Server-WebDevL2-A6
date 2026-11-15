@@ -49,7 +49,10 @@ export const auth = (...requiredRoles: UserRole[]) => {
 			decoded === null ||
 			typeof decoded.id !== "string"
 		) {
-			throw new AppError(httpStatus.UNAUTHORIZED, "Invalid or expired access token");
+			throw new AppError(
+				httpStatus.UNAUTHORIZED,
+				"Invalid or expired access token",
+			);
 		}
 
 		const user = await prisma.user.findUnique({
@@ -59,7 +62,10 @@ export const auth = (...requiredRoles: UserRole[]) => {
 		});
 
 		if (!user || user.isDeleted || user.status === UserStatus.DELETED) {
-			throw new AppError(httpStatus.UNAUTHORIZED, "User not found. Please log in again.");
+			throw new AppError(
+				httpStatus.UNAUTHORIZED,
+				"User not found. Please log in again.",
+			);
 		}
 
 		if (user.status === UserStatus.BLOCKED) {
