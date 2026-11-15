@@ -37,6 +37,7 @@ EDRMS (Emergency Disaster Response & Management System) is a REST API that conne
 EDRMS-Express-Server/
 ├── docs/
 │   ├── DatabaseSchema.drawio
+│   ├── DatabaseSchema.png
 │   └── DatabaseSchema.svg
 ├── prisma/
 │   ├── migrations/
@@ -227,7 +228,7 @@ EDRMS-Express-Server/
 
 ## 5. Database Schema
 
-[![EDRMS database schema](docs/DatabaseSchema.svg)](docs/DatabaseSchema.svg)
+[![EDRMS database schema](docs/DatabaseSchema.png)](docs/DatabaseSchema.png)
 
 The editable draw.io source is [docs/DatabaseSchema.drawio](docs/DatabaseSchema.drawio) (open it at [app.diagrams.net](https://app.diagrams.net)).
 
