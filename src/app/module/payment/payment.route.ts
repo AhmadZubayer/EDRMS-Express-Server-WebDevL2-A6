@@ -14,6 +14,8 @@ paymentRoutes.post(
 	paymentController.createPayment,
 );
 
+paymentRoutes.get("/receipt", paymentController.getReceipt);
+
 paymentRoutes.get("/", auth(), paymentController.getMyPayments);
 
 paymentRoutes.get(

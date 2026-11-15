@@ -720,7 +720,70 @@ const refundCancelledPaidDonationIntoDB = async (donationId: string) => {
 	});
 };
 
+const getReceiptByRefFromDB = async (ref: string) => {
+	const payment = await prisma.payment.findUnique({
+		where: { providerTransactionId: ref },
+		select: {
+			transactionId: true,
+			providerTransactionId: true,
+			amount: true,
+			provider: true,
+			status: true,
+			paidAt: true,
+			createdAt: true,
+			donation: {
+				select: {
+					isAnonymous: true,
+					donorName: true,
+					donorEmail: true,
+					user: { select: { name: true, email: true } },
+					campaign: {
+						select: {
+							title: true,
+							createdBy: {
+								select: {
+									name: true,
+									reliefOrg: { select: { organizationName: true } },
+								},
+							},
+						},
+					},
+				},
+			},
+		},
+	});
+
+	if (!payment) {
+		throw new AppError(httpStatus.NOT_FOUND, "Payment not found");
+	}
+
+	const { donation } = payment;
+	const anonymous = donation.isAnonymous;
+
+	return {
+		status: payment.status,
+		transaction_id: payment.transactionId,
+		provider_transaction_id: payment.providerTransactionId,
+		amount: Number(payment.amount),
+		payment_gateway: payment.provider,
+		paid_at: payment.paidAt ?? payment.createdAt,
+		is_anonymous: anonymous,
+		donor_name: anonymous
+			? null
+			: donation.donorName || donation.user?.name || null,
+		donor_contact: anonymous
+			? null
+			: donation.donorEmail || donation.user?.email || null,
+		campaign_title: donation.campaign.title,
+		relief_org:
+			donation.campaign.createdBy?.reliefOrg?.organizationName ||
+			donation.campaign.createdBy?.name ||
+			null,
+	};
+};
+
 export const paymentService = {
+	getReceiptByRefFromDB,
 	getPayableDonationFromDB,
 	createPaymentIntoDB,
 	completePaymentIntoDB,

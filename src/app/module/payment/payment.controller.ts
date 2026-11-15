@@ -70,7 +70,22 @@ const getPaymentById = catchAsync(
 	},
 );
 
+const getReceipt = catchAsync(async (req: Request, res: Response) => {
+	const ref = typeof req.query.ref === "string" ? req.query.ref : "";
+	if (!ref) {
+		throw new AppError(httpStatus.BAD_REQUEST, "Payment reference is required");
+	}
+	const receipt = await paymentService.getReceiptByRefFromDB(ref);
+	sendResponse(res, {
+		statusCode: httpStatus.OK,
+		success: true,
+		message: "Receipt retrieved successfully",
+		data: receipt,
+	});
+});
+
 export const paymentController = {
+	getReceipt,
 	createPayment,
 	getMyPayments,
 	getPaymentById,
